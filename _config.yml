@@ -19,6 +19,7 @@ BASE_PATH : http://yangtianci.github.io
 
 description : 这是我自己的主页, 我想写啥就写啥 
 title : 杨天赐
+subtitle: it's mine websit 
 logo : /assets/images/avatar.jpg
 #cover : /assets/images/background-cover.jpg
 
