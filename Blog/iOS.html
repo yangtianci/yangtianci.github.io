@@ -79,7 +79,34 @@
 	<li></li>
 	<li></li>
 	<li></li>
-	<li></li>
+	<br>
+	<li>
+		界面优化相关 
+	<div>
+		<h4>相关方案</h4> 
+		<ul>
+			<li>
+				<h5>避免离屏渲染</h5>
+				<div>触发因素: shouldRasterize（光栅化），masks（遮罩），shadows（阴影），渐变
+* edge antialiasing（抗锯齿），group opacity（不透明），复杂形状设置圆角等</div>
+				<ol>
+					<h6>解决方案</h6>
+					<li>mask: 使用图片完成遮罩效果, 可 UI 绘制图片, 或者手动绘制图片导出缓存 </li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</li>
+			<li>
+				<h5>CPU & GPU 效率平衡, 打破瓶颈</h5>
+			</li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	</li>
 </ol>
 
 </div>
