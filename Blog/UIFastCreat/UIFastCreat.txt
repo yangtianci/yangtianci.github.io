@@ -1,0 +1,383 @@
+
+
+#pragma mark ============ Masonry
+
+//左
+
+#pragma mark ========== kMasLeft/Off
+make.left.mas_equalTo(<#custom#>.mas_left);
+make.left.mas_equalTo(<#custom#>.mas_left).with.offset(<#custom#>);
+
+#pragma mark ========== kMasRight/Off
+make.right.mas_equalTo(<#custom#>.mas_right);
+make.right.mas_equalTo(<#custom#>.mas_right).with.offset(-<#custom#>);
+
+#pragma mark ========== kMasTop/Off
+make.top.mas_equalTo(<#custom#>.mas_top);
+make.top.mas_equalTo(<#custom#>.mas_top).with.offset(<#custom#>);
+
+#pragma mark ========== kMasBottom/Off
+make.bottom.mas_equalTo(<#custom#>.mas_bottom);
+make.bottom.mas_equalTo(<#custom#>.mas_bottom).with.offset(-<#custom#>);
+
+
+#pragma mark ========== kMasCenterX/Off
+make.centerX.mas_equalTo(<#custom#>.mas_centerX);
+make.centerX.mas_equalTo(<#custom#>.mas_centerX).with.offset(<#custom#>);
+
+#pragma mark ========== kMasCenterY/Off
+make.centerY.mas_equalTo(<#custom#>.mas_centerY);
+make.centerY.mas_equalTo(<#custom#>.mas_centerY).with.offset(<#custom#>);
+
+
+#pragma mark ========== kMasWidth
+make.width.mas_equalTo(<#custom#>);
+
+#pragma mark ========== kMasHeight
+make.height.mas_equalTo(<#custom#>);
+
+
+#pragma mark ============ Label
+
+//<#Name#>Label
+<#custom#> = [[UILabel alloc]init];
+[self.<#custom#> addSubview:<#custom#>];
+
+<#custom#>.font = [QBXLayoutManager GetFontWithSize:<#Number#>];
+<#custom#>.textColor = <#custom#>;
+<#custom#>.textAlignment = NSTextAlignment<#custom#>;
+<#custom#>.numberOfLines = <#custom#>;
+<#custom#>.text = @"ytc";
+[<#custom#> mas_makeConstraints:^(MASConstraintMaker *make) {
+    <#custom#>
+}];
+
+
+
+#pragma mark ============ View
+
+//<#Name#>View
+<#Name#> = [[UIView alloc]init];
+[self.<#Name#> addSubview:<#(nonnull UIView *)#>];
+<#Name#>.backgroundColor = <#Name#>;
+[<#Name#> mas_makeConstraints:^(MASConstraintMaker *make) {
+    <#Name#>
+}];
+
+
+#pragma mark ============ Button
+
+//<#Name#>按钮
+//--必须设置--
+<#custom#> = [[UIButton alloc]init];
+[self.<#custom#> addSubview:<#custom#>];
+//--基本设置--<##>
+[<#custom#> setTitle:<#(nullable NSString *)#> forState:UIControlStateNormal];
+[<#custom#> setTitleColor:<#(nullable UIColor *)#> forState:UIControlStateNormal];
+<#custom#>.titleLabel.font = [QBXLayoutManager GetFontWithSize:<#Number#>];
+
+[<#custom#> addTarget:self action:@selector(<#custom#>) forControlEvents:UIControlEventTouchUpInside];
+
+[<#Name#> mas_makeConstraints:^(MASConstraintMaker *make) {
+    <#Name#>
+}];
+
+
+
+#pragma mark ============ ImageView
+
+//<#Name#>图片
+UIImageView *<#Name#> = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"<#Name#>"]];
+[<#Name#> addSubview:<#Name#>];
+<#Name#>.backgroundColor = [UIColor clearColor];
+[<#Name#> mas_makeConstraints:^(MASConstraintMaker *make) {
+    <#Name#>
+}];
+
+#pragma mark ============ TextField
+
+//<#Name#>输入框
+//--必须设置--<##>
+<#custom#> = [[UITextField alloc]init];
+[self.<#custom#> addSubview:<#custom#>];
+//--基本设置--<##>
+<#custom#>.placeholder = @"<#custom#>";
+<#custom#>.textColor = <#custom#>;
+<#custom#>.font = [QBXLayoutManager GetFontWithSize:<#Number#>];
+<#custom#>.textAlignment = NSTextAlignmentLeft;
+[<#Name#> mas_makeConstraints:^(MASConstraintMaker *make) {
+    <#Name#>
+}];
+
+
+
+
+
+-(void)RequestData_isRegist_WithMobile:(NSString*)mobile Success:(void(^)(NSDictionary *infoDict))success Fail:(void(^)(NSString *errCode, NSString *errMsg))fail{
+    
+    NSMutableDictionary *paraDict = [NSMutableDictionary dictionary];
+    [paraDict setObject:mobile forKey:@"mobile"];
+    
+    [self RequestDataWithUrl:qbx_Login_isRegisted Param:paraDict Info:nil success:^(id result) {
+        success(result);
+    } failure:^(NSDictionary *errorInfo) {
+        
+        NSInteger failClass = [errorInfo[@"kNetFailClass"] integerValue];
+        
+        if (failClass == 2) {
+            NSString *msg = errorInfo[@"msg"];
+            
+            fail(nil,msg);
+        }else{
+            fail(nil,kNormalFailMsg);
+        }
+    }];
+    
+}
+
+
+---------------------------------------------
+
+
+{
+    
+    [self HideHUD];
+    
+    NSInteger isSuccess = [infoDict[@"code"] integerValue];
+    
+    NSString *msg = infoDict[@"msg"];
+    
+    if (isSuccess == 1) {
+        
+        NSDictionary *response = infoDict[@"request"];
+        
+        
+        
+    }else{
+        NSString *errMsg = msg;
+        [self ShortHudWithStr:errMsg];
+    }
+    
+    
+} Fail:^(NSString *errCode, NSString *errMsg) {
+    
+    [self HideHUD];
+    
+    [self ShortHudWithStr:errMsg];
+    
+}];
+
+
+
+#pragma mark ============ <#配置UI#>
+
+
+
+
+
+
+#pragma mark ============ 空页面配置
+
+-(void)ConfigurationPlaceViewWithType:(EmptyViewType)type{
+    
+    self.emptyView = [[QBXEmptyView alloc] initWithFrame:CGRectMake(0,  0, kScreenWidth, kScreenHeight) viewType:type];
+    [self.view addSubview:self.emptyView];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark ================= 网络数据
+
+-(void)NetWork{
+    
+    QBXProductConditionModel *condition = [[QBXProductConditionModel alloc]init];
+    
+    condition.user_status = self.userInfoManager.user_status;
+    condition.token = self.userInfoManager.remember_token;
+    condition.category = self.ProductCategory;
+    condition.search = self.ProductSearchTag;
+    
+    condition.page = [NSString stringWithFormat:@"%zd",self.currentPage];
+    
+    [self ShowHUD:nil];
+    
+    [self.V_M RequestData_ProductList_WithCondition:condition Success:^(NSArray *listArr, NSArray *bespeakArr, NSInteger totalPage){
+        
+        [self HideHUD];
+        
+        NSInteger remainder = self.dataArray.count % 10;
+        NSInteger local = self.dataArray.count / 10;
+        
+        if (remainder > 0) {
+            [self.dataArray removeObjectsInRange:NSMakeRange(local, remainder)];
+        }
+        
+        [self.dataArray addObjectsFromArray:listArr];
+        
+        [self.customTableView reloadData];
+        
+        //根据结果判断空视图
+        if (self.dataArray.count == 0) {
+            [self ConfigurationPlaceViewWithType:EmptyViewTypeNoSearch];
+        }else if (self.dataArray.count > 0){
+            if (self.emptyView) {
+                [self.emptyView removeFromSuperview];
+            }
+        }
+        
+        [self.customTableView.mj_header endRefreshing];
+        [self.customTableView.mj_footer endRefreshing];
+        
+    } Fail:^(NSString *errCode, NSString *errMsg) {
+        
+        [self HideHUD];
+        
+        [self ShortHudWithStr:errMsg];
+        
+        [self ConfigurationPlaceViewWithType:EmptyViewTypeNoNetwork];
+        
+        [self.customTableView.mj_header endRefreshing];
+        [self.customTableView.mj_footer endRefreshing];
+        
+    }];
+    
+    
+}
+
+
+#pragma mark ============ 刷新加载
+
+-(void)AddRefreshMethod{
+    
+    
+    QBXRefreshHeader *header = [QBXRefreshHeader headerWithRefreshingBlock:^{
+        
+        self.currentPage = 1;
+        
+        [self.dataArray removeAllObjects];
+        
+        [self NetWork];
+        
+    }];
+    
+    self.customTableView.mj_header = header;
+    
+    
+    QBXRefreshFooter *footer = [QBXRefreshFooter footerWithRefreshingBlock:^{
+        
+        self.currentPage++;
+        
+        [self NetWork];
+        
+    }];
+    
+    self.customTableView.mj_footer = footer;
+    
+    [self.customTableView.mj_header beginRefreshing];
+    
+}
+
+
+
+
+
+#pragma mark ============ 绘制虚线
+
+- (void)drawLineOfDashByCAShapeLayer:(UIView *)lineView lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor lineDirection:(BOOL)isHorizonal {
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    
+    [shapeLayer setBounds:lineView.bounds];
+    
+    if (isHorizonal) {
+        
+        [shapeLayer setPosition:CGPointMake(CGRectGetWidth(lineView.frame) / 2, CGRectGetHeight(lineView.frame))];
+        
+    } else{
+        [shapeLayer setPosition:CGPointMake(CGRectGetWidth(lineView.frame) / 2, CGRectGetHeight(lineView.frame)/2)];
+    }
+    
+    [shapeLayer setFillColor:[UIColor clearColor].CGColor];
+    //  设置虚线颜色为blackColor
+    [shapeLayer setStrokeColor:lineColor.CGColor];
+    //  设置虚线宽度
+    if (isHorizonal) {
+        [shapeLayer setLineWidth:CGRectGetHeight(lineView.frame)];
+    } else {
+        
+        [shapeLayer setLineWidth:CGRectGetWidth(lineView.frame)];
+    }
+    [shapeLayer setLineJoin:kCALineJoinRound];
+    //  设置线宽，线间距
+    [shapeLayer setLineDashPattern:[NSArray arrayWithObjects:[NSNumber numberWithInt:lineLength], [NSNumber numberWithInt:lineSpacing], nil]];
+    //  设置路径
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathMoveToPoint(path, NULL, 0, 0);
+    
+    if (isHorizonal) {
+        CGPathAddLineToPoint(path, NULL,CGRectGetWidth(lineView.frame), 0);
+    } else {
+        CGPathAddLineToPoint(path, NULL, 0, CGRectGetHeight(lineView.frame));
+    }
+    
+    [shapeLayer setPath:path];
+    CGPathRelease(path);
+    //  把绘制好的虚线添加上来
+    [lineView.layer addSublayer:shapeLayer];
+}
+
+
+
+NSArray *sortArray = [keyArr sortedArrayUsingComparator:^NSComparisonResult(id _Nonnull obj1, id _Nonnull obj2) {
+    return [obj1 compare:obj2 options:NSNumericSearch];
+}];
+
+
+
+NSArray *titleArray = @[@"微信",@"朋友圈",@"QQ",@"微博",@"邮件",@"复制链接"];
+
+
+koukou weibo youjian
+
+
+
+-(void)textFieldDidChange:(UITextField *)textField{
+
+[self.PhoneField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+
+}
+
+
+
+//更新布局
+[self.middle_commissionView_ValueOne mas_remakeConstraints:^(MASConstraintMaker *make) {
+    
+    make.centerY.mas_equalTo(self.smallView.mas_centerY);
+    make.right.mas_equalTo(self.smallView.mas_right);
+    make.left.mas_equalTo(self.smallView.mas_left);
+    
+}];
+
+[self.middle_commissionView_ValueOne setNeedsUpdateConstraints];
+// 调用此方法告诉self.view检测是否需要更新约束，若需要则更新，下面添加动画效果才起作用
+[self.middle_commissionView_ValueOne updateConstraintsIfNeeded];
+
+
+
+
+
+
+
+
+
+
+
