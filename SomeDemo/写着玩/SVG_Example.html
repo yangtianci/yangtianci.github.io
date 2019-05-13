@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG测试文档</title>
+</head>
+<body>
+	
+	<h1>基础SVG图形</h1>
+
+	<h4>绘制SVG流程</h4>
+	
+	<div>
+		<ol>
+			<li>打开SVG标签</li>
+			<li>绘制基本图形/文字,设置基本属性</li>
+			<li>添加滤镜.动画等等附加属性</li>
+		</ol>
+	</div>
+
+	<table border='1' width='100%'>
+		
+	<tr>
+		<td>
+			矩形 : rect
+			<svg>
+				<rect x='50%	' y='20' rx='20' width='100' height='100' style='fill:pink;fill-opacity:0.6;stroke:blue;stroke-opacity:0.6;'>
+					<animate attributeName="width" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="0" to="100" repeatCount="indefinite"/>
+					<animate attributeName="height" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="0" to="100" repeatCount="indefinite"/>
+				</rect>
+			</svg>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			圆形 : circle
+			<svg>
+				<circle cx='170' cy='70' r='50' stroke='orange' stroke-width='30' fill='yellow' >
+					<animate attributeName="r" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="0" to="50" repeatCount="indefinite"/>
+				</circle>
+			</svg>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			椭圆 : ellipse
+			<svg>
+				<ellipse cx='170' cy='70' rx='100' ry='50' fill='orange' stroke='red' stroke-width='5' opacity='0.5'>
+					<animate attributeName="rx" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="0" to="100" repeatCount="indefinite"/>
+					<animate attributeName="ry" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="0" to="50" repeatCount="indefinite"/>
+				</ellipse>
+			</svg>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			直线 : line
+			<svg>
+				<line x1='50' y1='80' x2='280' y2='80' fill='red' stroke='orange'/>
+			</svg>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			多边形:希腊语[poly==many] [gon==angle]
+			<svg>
+				<polygon points="100,10 40,180 190,60 10,60 160,180"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;" />
+			</svg>		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			曲线:[poly line]
+			<svg>
+ 				 <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="		fill:white;stroke:red;stroke-width:4" />
+			</svg>		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			路径 : path
+			<svg>
+  			<path id="lineAB" d="M 100 350 l 150 -300" stroke="red"
+		 		stroke-width="3" fill="none" />
+		  <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
+		  		stroke-width="3" fill="none" />
+		  <path d="M 175 200 l 150 0" stroke="green" stroke-width="3"
+		  		fill="none" />
+		  <path d="M 100 350 q 150 -300 300 0" stroke="blue"
+		  		stroke-width="5" fill="none" />
+		  <!-- Mark relevant points -->
+		  <svg stroke="black" stroke-width="3" fill="black">
+		    <circle id="pointA" cx="100" cy="350" r="3" />
+		    <circle id="pointB" cx="250" cy="50" r="3" />
+		    <circle id="pointC" cx="400" cy="350" r="3" />
+		  </svg>
+		  <!-- Label the points -->
+		  <svg font-size="30" font="sans-serif" fill="black" stroke="none"
+		  		text-anchor="middle">
+		    <text x="100" y="350" dx="-30">A</text>
+		    <text x="250" y="50" dy="-10">B</text>
+		    <text x="400" y="350" dx="30">C</text>
+  </svg>
+</svg> 		
+		</td>
+	</tr>
+	<!-- 文本 -->
+	<tr>
+		<td>
+			SVG与文本结合 : 
+			<br> text (1.可以使用tspan进行文字内联操作 2.使用defs定义路径,textpath绘制文本路径 3.可以绘制链接文本)
+			<!-- 路径文本:文本的位置基本就由path位置决定 -->
+			<!-- 先 定义路径 不显示,然后将路径赋值给文本即可 -->
+			<svg x='150' y='150' stroke='orange'>
+				<defs>
+					<path id="path1" d="M100,50 a1,1 0 0,0 100,0" />
+				</defs>
+				<text>
+					<textpath xlink:href='#path1'>使用路径规划文本</textpath>
+				</text>
+			</svg>
+			<!-- 内联文本 -->
+			<!-- 路径和内联好像不能一起使用 -->
+			<svg x='300' y='100' stroke='blue'>
+				<text>
+					<tspan x='100' y='50'>内联文本演示 一</tspan>
+					<tspan x='100' y='100'>内联文本演示 二</tspan>
+				</text>
+			</svg>
+		</td>
+	</tr>
+	</table>
+
+<!-- SVG属性演示 -->
+
+<h1>SVG基本属性</h1>
+	<table border='2'>
+		<tr>
+			<td>
+				属性:Stroke
+				<svg>
+					<text y='30'>虚线:dash array</text>
+					<g fill="none" stroke="orange" stroke-width="4">
+				    <path stroke-dasharray="5,5" d="M5 50 l215 0" />
+				    <path stroke-dasharray="10,10" d="M5 90 l215 0" />
+				    <path stroke-dasharray="20,10,5,5,5,10" d="M5 120 l215 0" />
+				  </g>
+				</svg>	
+				<svg>
+					<text y='30'>线帽 : line cap</text>
+					<g fill="none" stroke="orange" stroke-width="6">
+				    <path stroke-linecap="butt" d="M5 50 l215 0" />
+				    <path stroke-linecap="round" d="M5 90 l215 0" />
+				    <path stroke-linecap="square" d="M5 120 l215 0" />
+				  </g>
+				</svg>
+				<svg>
+					<text y='30'>线宽 : line width</text>
+					<g fill="none" stroke="orange">
+				    <path stroke-width="2" d="M5 50 l215 0" >
+				    <path stroke-width="4" d="M5 90 l215 0" />
+				    <path stroke-width="6" d="M5 120 l215 0" />
+				  </g>
+				</svg>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				属性:滤镜filter <a href="http://www.runoob.com/svg/svg-filters-intro.html">多种滤镜种类</a>
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+				  <defs>
+				    <filter id="f1" x="0" y="0" width="200%" height="200%">
+				      <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+				      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+				      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+				    </filter>
+				  </defs>
+				  <rect width="90" height="90" stroke="green" stroke-width="3"
+				  fill="yellow" filter="url(#f1)">
+					<animate attributeName="x" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="100" to="50" repeatCount="indefinite"/>
+					<animate attributeName="rx" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="0" to="50" repeatCount="indefinite"/>
+				</rect>
+				</svg> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				颜色渐变(gradient)-线性:linear
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+				  <defs>
+
+				    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+				      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+				      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+				    </linearGradient>
+
+					<linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+				      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+				      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+				    </linearGradient>
+
+				  </defs>
+				  <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" >
+				  	<animate attributeName="rx" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="100" to="50" repeatCount="indefinite"/>
+				  </ellipse>
+				  <text fill="url(#grad2)" font-size="45" font-family="Verdana" x="150" y="86">
+				  lalala
+					<animate attributeName="x" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="100" to="50" repeatCount="indefinite"/>
+				</text>
+				</svg> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				颜色渐变(gradient)-放射性:radial
+				<svg>
+					
+					<!-- 定义滤镜 -->
+				<defs>
+					<!-- 滤镜一 -->
+					<radialGradient id='gradient1' cx="50%" cy="50%" r="50%" fx="50%" fy="100%">
+					  <stop offset="0%" style="stop-color:rgb(1,255,255);
+				      stop-opacity:0" />
+				      <stop offset="30%" style="stop-color:rgb(100,0,255);stop-opacity:1" />
+				      <stop offset="60%" style="stop-color:rgb(0,100,255);stop-opacity:1" />
+				      <stop offset="90%" style="stop-color:rgb(0,200,255);stop-opacity:1" />
+					</radialGradient>
+				
+					<!-- 滤镜二 -->
+					<radialGradient id='gradient2' cx="50%" cy="50%" r="50%" fx="50%" fy="100%">
+						<stop offset="0%" style="stop-color:rgb(1,255,255);
+				      stop-opacity:0" />
+				      <stop offset="30%" style="stop-color:rgb(100,100,255);stop-opacity:1" />
+				      <stop offset="60%" style="stop-color:rgb(0,50,255);stop-opacity:1" />
+				      <stop offset="90%" style="stop-color:rgb(100,200,255);stop-opacity:1" />
+					</radialGradient>
+				</defs>
+
+					<!-- 显示图形 -->
+					<ellipse cx='150' cy='80' rx='100' ry='50' fill='url(#gradient1)'>
+					<animate attributeName="rx" attributeType="XML" begin="0s" dur="3s" fill="freeze" from="100" to="50" repeatCount="indefinite"/> 
+					<animate attributeName="ry" attributeType="XML" begin="0s" dur="s" fill="freeze" from="50" to="100" repeatCount="indefinite"/> 
+					</ellipse>
+					<!-- 显示文字 -->
+					<text x='100' y='90' font-size="45" font-family="Verdana" fill='url(#gradient2)'>lalala
+					<animateMotion path="M 0 0 L 100 100" begin="0s" dur="5s" fill="freeze" repeatCount="indefinite"/>
+					</text>
+				</svg>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				SVG-动画
+				<svg>
+					<!-- 矩形 -->
+					<rect id='rect' x='300' y='100' width='300' height='100' style='fill:orange'>
+						<animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="0" repeatCount="indefinite"/> 
+					    <animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0" repeatCount="indefinite"/> 
+					    <animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800" repeatCount="indefinite"/> 
+					    <animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300" repeatCount="indefinite"repeatCount="indefinite"/> 
+					    <animateColor attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze" repeatCount="indefinite"/>
+					</rect>
+					<!-- 文字变换 -->
+					<g transform="translate(100,100)"> 
+					    <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24; visibility:hidden" stroke='blue' fill='red'> SVG_Test
+					      <set attributeName="visibility" attributeType="CSS" to="visible" begin="1s" dur="5s" fill="freeze" />
+					      <animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"/>
+					      <animateColor attributeName="fill" attributeType="CSS" from="red" to="blue" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"/> 
+					      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="-30" to="0" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"/> 
+					      <animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="3" additive="sum" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"/> 
+					    </text> 
+					 </g>
+				</svg>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	</table>
+
+
+</body>
+</html>
