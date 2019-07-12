@@ -87,8 +87,8 @@
 	function getDateString (dateStamp) {
 		
 		var d = new Date(dateStamp * 1000);    
-		var date = (d.getFullYear()) + "-" + 
-           (d.getMonth() + 1) + "-" +
+		var date = (d.getFullYear())  + 
+           (d.getMonth() + 1) +
            (d.getDate());
 
            //  + " " + 
@@ -98,7 +98,7 @@
 
         // 格式化日期数据 
         var oldD = new Date(date);
-        var newD = new Date(oldD).Format("yyyy-MM-dd");
+        var newD = new Date(oldD).Format("yyyyMMdd");
 
           // return date;
           return newD;
