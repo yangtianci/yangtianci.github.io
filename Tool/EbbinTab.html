@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ebbin_table</title>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	
+
+	
+
+
+
+
+</body>
+</html>
+
+
+
+	<!-- 脚本 -->
+
+<script>
+
+
+// Caculate 相关 
+
+	function GetDateArray () {
+
+		// ebbin 数组 
+		var ebbinNode = ['0','1','2','4','7','15','22','30','45', '60', '100','180'];
+
+		// 当前时间 
+
+
+		// ebbin 日期数组 
+
+		var ebbinDateArr = [];
+
+		var day_1_interval = 24 * 60 * 60; // 每天秒数 
+		var cur_interval = Math.round(new Date() / 1000);
+
+		for (var idx in ebbinNode) {
+			
+			var dayCount = ebbinNode[idx];
+
+			// 获取需要前推的秒数
+			var timeInterval = day_1_interval * Number(dayCount);
+
+			var date_interval = cur_interval - timeInterval;
+
+			var date_Node = getDateString(date_interval);
+
+			// console.log(typeof(date_Node)); // String 
+
+			ebbinDateArr.push(date_Node);
+
+		}
+		return ebbinDateArr;
+	}
+	
+
+
+	Date.prototype.Format = function(fmt)   
+	{ //author: meizz   
+			var o = {   
+				"M+" : this.getMonth()+1,                 //月份   
+				"d+" : this.getDate(),                    //日   
+				"h+" : this.getHours(),                   //小时   
+				"m+" : this.getMinutes(),                 //分   
+				"s+" : this.getSeconds(),                 //秒   
+				"q+" : Math.floor((this.getMonth()+3)/3), //季度   
+				"S"  : this.getMilliseconds()             //毫秒   
+			};   
+			if(/(y+)/.test(fmt))   
+			fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));   
+			for(var k in o)   
+			if(new RegExp("("+ k +")").test(fmt))   
+			fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
+			return fmt;   
+	} 
+
+
+
+	//根据时间戳生成的时间对象 
+	function getDateString (dateStamp) {
+		
+		var d = new Date(dateStamp * 1000);    
+		var date = (d.getFullYear()) + "-" + 
+           (d.getMonth() + 1) + "-" +
+           (d.getDate());
+
+           //  + " " + 
+           // (d.getHours()) + ":" + 
+           // (d.getMinutes()) + ":" + 
+           // (d.getSeconds())
+
+        // 格式化日期数据 
+        var oldD = new Date(date);
+        var newD = new Date(oldD).Format("yyyy-MM-dd");
+
+          // return date;
+          return newD;
+	}
+
+
+// GUI 相关 
+	
+
+	// dynamic insert div and time data 
+	
+	function CreatEbbinsListView (EbbinArr) {
+
+		// document.body.setAttribute("background-color", "#FFE4E1");
+
+		var y = 30;
+
+		var head = document.createElement("head3");
+		head.innerHTML="Ebbins_List";
+		document.body.append(head);
+
+		for (var timeStr in EbbinArr) {
+
+			var listDiv = document.createElement("div");
+			listDiv.setAttribute("class", "ebbinListCell");
+
+			var Txt = document.createElement("Text");
+			Txt.innerHTML = EbbinArr[timeStr];
+			Txt.setAttribute("class", "TCTxt");
+
+			listDiv.appendChild(Txt)
+			document.body.appendChild(listDiv);
+		}
+
+		hr = document.createElement('hr');
+		document.body.append(hr);
+
+	}
+
+	
+
+
+	function CreatEbbinsRecordView (EbbinArr) {
+
+
+		var head = document.createElement("head3");
+		head.innerHTML="Today_Record";
+		document.body.append(head);
+
+		var table = document.createElement("table");
+		table.setAttribute("class", "table");
+
+		for(var i = 0; i < 4; i++){
+			var row = document.createElement("tr");
+			for(var j = 0; j < 3; j++){
+				var colum = document.createElement("td");
+
+				var idx = i*3 + j + 1;
+
+				colum.setAttribute("id", "BTXT_" + idx);
+				colum.setAttribute("class", "ebbinTD");
+
+				colum.innerHTML=idx;
+
+				var hr = document.createElement("hr");
+				hr.setAttribute("background-color", "#FFD700");
+				colum.appendChild(hr);
+
+				var txt = document.createElement("text");
+				txt.innerHTML = "\n" + EbbinArr[i*3 + j ];
+				txt.setAttribute("class", "BITxt");
+
+				colum.appendChild(txt);
+
+
+				row.appendChild(colum);
+			}
+			table.appendChild(row);
+		}
+
+		document.body.append(table);
+
+	}
+
+
+
+	$(document).ready(function(){
+
+	  $(".ebbinTD").click(function(){
+
+	  	// var id = document.getElementById(elementId: DOMString);
+
+	    $(this).fadeOut('slow/300/fast', function() {
+	    	
+	    });
+
+	  });
+
+	});
+
+
+
+
+	// 获取 ebbins time  node 
+	var EbbinDateArray = GetDateArray(); 
+	// console.log(EbbinDateArray);
+	
+	// EbbinsListView 
+	CreatEbbinsListView(EbbinDateArray);
+
+	// CreatEbbinsRecordView 
+	CreatEbbinsRecordView(EbbinDateArray);
+
+
+</script>
+
+
+
+<!-- 样式表  -->
+
+
+<style>
+
+
+	.BITxt{
+		font-size: 12px;
+		font-family: Sans-serif;
+	}
+
+	.ebbinTD{
+		height: 50px;
+		width: 25%;
+		background-color : #FFD700;
+
+	}
+
+	.ebbinListCell{
+		background-color:  #E0FFFF;
+		height: 30px;
+		width: 100%;
+		text-align: center;
+		font-size: 15px;
+		font-family: Sans-serif;
+
+	}
+
+	.TCTxt{
+		text-align: center;
+		line-height: 30px;
+	}
+
+
+	.table{
+		background-color:  #E0FFFF;
+		height: 100px;
+		width: 100%;
+		text-align: center;
+		border-radius: 5px;
+		border-width: 5px;
+		border-color: #00FFFF;
+	}
+
+	
+	.box{
+		background-color: red;
+		height: 100px;
+		width: 100px;
+	}
+
+	.first{
+		height: 200;
+		width: 100;
+		background-color: orange;
+		display: flex;
+	}
+
+	#div-f{
+		background-color: red;
+		display: 1;
+	}
+
+	#div-s{
+		background-color: blue;
+		display: 2;
+	}
+
+
+</style>
+
+
+
+
+
+
+
+
+
