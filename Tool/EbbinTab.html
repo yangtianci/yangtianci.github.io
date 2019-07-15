@@ -124,22 +124,45 @@
 
 		var y = 30;
 
-		var head = document.createElement("head3");
+
+
+		var TWrapper = document.createElement("div");
+		TWrapper.setAttribute("class", "container");
+
+		 var head = document.createElement("head3");
 		head.innerHTML="Ebbins_List";
-		document.body.append(head);
+
+		TWrapper.appendChild(head);
+
+
+		var list = document.createElement("ul");
+		list.setAttribute("class", "list-group");
+
+
 
 		for (var timeStr in EbbinArr) {
 
-			var listDiv = document.createElement("div");
-			listDiv.setAttribute("class", "ebbinListCell");
+			// var listDiv = document.createElement("div");
+			// listDiv.setAttribute("class", "ebbinListCell");
 
-			var Txt = document.createElement("Text");
-			Txt.innerHTML = EbbinArr[timeStr];
-			Txt.setAttribute("class", "TCTxt");
+			// var Txt = document.createElement("Text");
+			// Txt.innerHTML = EbbinArr[timeStr];
+			// Txt.setAttribute("class", "TCTxt");
 
-			listDiv.appendChild(Txt)
-			document.body.appendChild(listDiv);
+			// listDiv.appendChild(Txt)
+			// document.body.appendChild(listDiv);
+
+			var li = document.createElement("li");
+			li.setAttribute("class", "list-group-item list-group-item-primary");
+			li.setAttribute("text-align", "center");
+			li.innerHTML = EbbinArr[timeStr];
+
+			list.appendChild(li);
 		}
+
+		TWrapper.appendChild(list);
+
+		document.body.append(TWrapper);
 
 		hr = document.createElement('hr');
 		document.body.append(hr);
@@ -196,8 +219,6 @@
 
 		document.body.append(wrapper);
 
-		// document.body.append(table);
-
 	}
 
 
@@ -205,8 +226,6 @@
 	$(document).ready(function(){
 
 	  $(".ebbinTD").click(function(){
-
-	  	// var id = document.getElementById(elementId: DOMString);
 
 	    $(this).fadeOut('slow/300/fast', function() {
 	    	
@@ -239,19 +258,10 @@
 
 <style>
 
-
-/** iPhone **/
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-
-
-	
-
-
-}
-
 	.BITxt{
-		/* font-size: 12px;
-		font-family: Sans-serif; */
+		text-align: center;
+		margin-right: 0px;
+		margin-left: 0px;
 	}
 
 	.ebbinTD{
@@ -266,9 +276,6 @@
 		height: 30px;
 		width: 100%;
 		text-align: center;
-		/* font-size: 15px; */
-		/* font-family: Sans-serif; */
-
 	}
 
 	.TCTxt{
@@ -283,8 +290,6 @@
 		width: 100%;
 		text-align: center;
 		border-radius: 5px;
-		/* border-width: 5px; */
-		/* border-color: #00FFFF; */
 	}
 
 
