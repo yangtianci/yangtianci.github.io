@@ -4,7 +4,15 @@
 	<meta charset="UTF-8">
 	<title>Ebbin_table</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+
 </head>
 <body>
 	
@@ -148,6 +156,11 @@
 		head.innerHTML="Today_Record";
 		document.body.append(head);
 
+		// <div class="table-responsive"> 
+
+		var wrapper = document.createElement("div");
+		wrapper.setAttribute("class", "table-responsive");
+
 		var table = document.createElement("table");
 		table.setAttribute("class", "table");
 
@@ -179,7 +192,11 @@
 			table.appendChild(row);
 		}
 
-		document.body.append(table);
+		wrapper.appendChild(table);
+
+		document.body.append(wrapper);
+
+		// document.body.append(table);
 
 	}
 
@@ -223,35 +240,42 @@
 <style>
 
 
+/** iPhone **/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+
+	
+
+
+}
+
 	.BITxt{
-		font-size: 10rem;
-		font-family: Sans-serif;
+		/* font-size: 12px;
+		font-family: Sans-serif; */
 	}
 
 	.ebbinTD{
-		height: 100px;
+		height: 50px;
 		width: 25%;
-		font-size: 10rem;
 		background-color : #FFD700;
 
 	}
 
+	.ebbinListCell{
+		background-color:  #E0FFFF;
+		height: 30px;
+		width: 100%;
+		text-align: center;
+		/* font-size: 15px; */
+		/* font-family: Sans-serif; */
+
+	}
 
 	.TCTxt{
 		text-align: center;
-		line-height: 50rem;
-		font-size: 13rem;
+		line-height: 30px;
 	}
 
-
-	.ebbinListCell{
-		background-color:  #E0FFFF;
-		height: 50rem;
-		width: 100%;
-		text-align: center;
-		font-family: Sans-serif;
-
-	}
 
 	.table{
 		background-color:  #E0FFFF;
@@ -259,8 +283,8 @@
 		width: 100%;
 		text-align: center;
 		border-radius: 5px;
-		border-width: 5px;
-		border-color: #00FFFF;
+		/* border-width: 5px; */
+		/* border-color: #00FFFF; */
 	}
 
 
