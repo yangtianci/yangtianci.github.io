@@ -145,9 +145,9 @@
 			// var listDiv = document.createElement("div");
 			// listDiv.setAttribute("class", "ebbinListCell");
 
-			// var Txt = document.createElement("Text");
-			// Txt.innerHTML = EbbinArr[timeStr];
-			// Txt.setAttribute("class", "TCTxt");
+			var Txt = document.createElement("Text");
+			Txt.innerHTML = EbbinArr[timeStr];
+			Txt.setAttribute("class", "text-center");
 
 			// listDiv.appendChild(Txt)
 			// document.body.appendChild(listDiv);
@@ -155,7 +155,9 @@
 			var li = document.createElement("li");
 			li.setAttribute("class", "list-group-item list-group-item-primary");
 			li.setAttribute("text-align", "center");
-			li.innerHTML = EbbinArr[timeStr];
+			// li.innerHTML = EbbinArr[timeStr];
+
+			li.appendChild(Txt);
 
 			list.appendChild(li);
 		}
