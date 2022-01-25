@@ -7,6 +7,13 @@
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 <link rel="stylesheet" href="assets/css/main.css" />
 <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<script src="./assets/lib/art-template-web.js"></script>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
 </head>
 <body>
 
@@ -50,8 +57,6 @@
 		<section>
 			<ul class="checklist">
 				
-
-
 				<li><a href="Blog/ViewPoint.html">Point</a></li>
 				
 				<li><a href="Blog/Aim&Record.html">Aim</a></li>
@@ -67,101 +72,12 @@
 <!-- Two --> 	<!-- 详细文章部分 -->
 <section id="two" class="wrapper style2 alt">
 	<div class="inner">
-		
-		<div class="spotlight">
-			<div class="image">
-				<img src="images/home_page_iphone.gif" alt="" />
-			</div>
-			<div class="content">
-				<h3>iOS</h3>
-				<ul class="actions">
-					<li><a href="Blog/iOS.html" class="button alt">Details</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="spotlight">
-			<div class="image">
-				<img src="images/3.GIF" alt="" />
-			</div>
-			<div class="content">
-				<h3>html + js + css + vue</h3>
-				<ul class="actions">
-					<li><a href="Blog/html_JS_css.html" class="button alt">Details</a></li>
-				</ul>
-			</div>
-		</div>
-		
-		<div class="spotlight">
-			<div class="image">
-				<img src="images/haaa.jpg" alt="" />
-			</div>
-			<div class="content">
-				<h3>Other</h3>
-				<!-- <p>一些其他构思</p> -->
-				<ul class="actions">
-					<li><a href="Blog/其他.html" class="button alt">Details</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="spotlight">
-			<div class="image">
-				<img src="images/hp_01.jpg" alt="" />
-			</div>
-			<div class="content">
-				<h3>Skills Tree</h3>
-				<!-- <p>自身大概的技能点总结</p> -->
-				<ul class="actions">
-					<li><a href="Blog/技能树.html" class="button alt">Details</a></li>
-				</ul>
-			</div>
-		</div>
-
-
-		<div class="spotlight">
-			<div class="image">
-				<img src="images/home_page_java.gif" alt="" />
-			</div>
-			<div class="content">
-				<h3>Java</h3>
-				<p>Java.</p>
-				<ul class="actions">
-					<li><a href="Blog/Java.html" class="button alt">Details</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="spotlight">
-					<div class="image">
-						<img src="images/home_page_car.gif" alt="" />
-					</div>
-					<div class="content">
-						<h3>零散测试 demo</h3>
-						<!-- <p>不知道什么时候搞的各种功能模块 demo, 大部分都是大型车祸现场~手动斜眼 </p> -->
-						<ul class="actions">
-							<li><a href="SomeDemo/DemoList.html" class="button alt">Details</a></li>
-						</ul>
-					</div>
-		</div>
-	
-		<div class="spotlight">
-					<div class="image">
-						<img src="images/117B0AA35E48F9D23B15E55FDCD63D10.gif" alt="" />
-					</div>
-					<div class="content">
-						<h3>Play</h3>
-						<p>随便写着玩的东西 </p>
-						<ul class="actions">
-							<li><a href="SomeDemo/写着玩/MainList.html" class="button alt">Details</a></li>
-						</ul>
-					</div>
-		</div>
-
+		<!-- 此处插入模板  -->
 		<ul class="actions special">
 			<li><a href="#" class="button alt">Ipsum magna tempus</a></li>
 		</ul>
 	</div>
+
 </section>
 <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
 
@@ -206,12 +122,90 @@
 	<div class="copyright">斯国一 &copy; 啦啦啦~ <a href="http://www.cssmoban.com/" target="_blank" title="###">借来的模板, 别看了, 想要自己去找</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">模板之家扒来的</a></div>
 </footer>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="assets/js/main.js"></script>
+
+
+<script type="text/html" id="item">
+
+	{{each obj}}
+	<div class="spotlight">
+		<div class="image">
+			<img src="{{$value.img}}" alt="" />
+		</div>
+		<div class="content">
+			<h3>{{$value.bigTit}}</h3>
+			<p>{{$value.title}}</p>
+			<ul class="actions">
+				<li><a href="{{$value.jump}}" class="button alt">Details</a></li>
+			</ul>
+		</div>
+	</div>
+
+	{{/each}}
+
+</script>
+
+
+
+<script>
+
+
+
+$(function(){
+
+	var arr = 
+	[{
+		img : 'images/home_page_iphone.gif',
+		bigTit : 'iOS',
+		title : ' ',
+		jump : 'Blog/iOS.html'
+	},
+	{
+		img : 'images/3.GIF',
+		bigTit : 'html + js + css + vue',
+		title : ' ',
+		jump : 'Blog/html_JS_css.html'
+	},
+	{
+		img : 'images/haaa.jpg',
+		bigTit : '一些其他构思',
+		title : '一些其他构思',
+		jump : 'Blog/其他.html'
+	},
+	{
+		img : 'images/hp_01.jpg',
+		bigTit : '自身大概的技能点总结',
+		title : 'Skills Tree',
+		jump : 'Blog/技能树.html'
+	},
+	{
+		img : 'images/home_page_java.gif',
+		bigTit : 'Java',
+		title : ' ',
+		jump : 'Blog/Java.html'
+	},
+	{
+		img : 'images/home_page_car.gif',
+		bigTit : '零散测试 demo',
+		title : ' ',
+		jump : 'SomeDemo/DemoList.html'
+	},
+	{
+		img : 'images/117B0AA35E48F9D23B15E55FDCD63D10.gif',
+		bigTit : 'Play',
+		title : '随便写着玩的东西 ',
+		jump : 'SomeDemo/写着玩/MainList.html'
+	}
+];
+
+	var temp = template('item',{obj:arr});
+	var content = $('#two .inner');
+	content.html(temp);
+
+})
+
+
+</script>
+
 
 </body>
 </html>
