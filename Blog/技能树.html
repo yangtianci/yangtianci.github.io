@@ -102,6 +102,8 @@ android
 学习阶段 
 Java, php 
 
+
+
 <div style="display: none;" id="phone"></div>
 
 <form action="" id="pwdform">
@@ -120,7 +122,9 @@ $(function(){
 	$('#pwdform').on('submit',function(e){
 		e.preventDefault()
 		if(pwd.val() === 'msp'){
-			$('#phone').html('1-8-2-6-0-2-8-6-5-1-1').show()
+			$('#phone').html(`1-8-2-6-0-2-8-6-5-1-1
+				a 12 
+			`).show()
 		}
 	})
 
