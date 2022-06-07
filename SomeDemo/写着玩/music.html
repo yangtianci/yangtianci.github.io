@@ -1,0 +1,3582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>music list </title>
+	
+	<script type="text/javascript" src="../../assets/lib/jquery-3.6.0.js"></script>
+
+	<script type="text/javascript" src="../../assets/lib/jquery.fireworks.js"></script>
+	
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	
+</head>
+
+
+<style>
+	.container{
+		margin: 2%;
+		color: rgb(230, 144, 159);
+	}
+
+.rowSpan{
+	padding-left: 15px;
+}
+
+.rowcheckbox{
+	padding-left: 20px;
+	margin-left: 20px;
+}
+
+a{
+	color: rgb(212, 99, 117) !important;
+}
+
+
+</style>
+
+<body>
+
+	<div class="container">
+		<div>
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+
+			</ul>
+		  
+			<!-- Tab panes -->
+			<div class="tab-content">
+
+			 
+
+			</div>
+		  
+		  </div>
+	  </div>
+		
+
+		
+	  <table class="table table-striped">
+		  
+	  </table>
+
+
+	
+</body>
+</html>
+
+
+<!-- // 我喜欢的歌单 ilikeSong -->
+<script>
+// 我喜欢的歌单 
+
+	var ilikeSong = `eau - yutaka hirasaka
+	America 2 China - 南征北战NZBZ / Raz-B / Rick Ross
+	I Miss You - Czarina
+	Lovefool - twocolors
+	Small Talk (feat. Moonessa) - Max Oazo / Moonessa
+	Count The Hours - BEAUZ / Nevve / Kastilione
+	天亮以前说再见 - 曲肖冰
+	The Nights - Avicii / Nicholas Furlong
+	Relax Take it Easy - Cdeep
+	Gentleman - 戴爱玲 / 刘伟德
+	不退让 - 崔子格
+	哪里都是你 - 队长
+	Let Me Down Slowly - Cyan Kicks
+	带我去找夜生活 - 告五人
+	I Said Hi - Amy Shark
+	Lost Control (Original Mix) - Tyron Hapi / Bianca
+	Beautiful Mistakes - Maroon 5 / Megan thee Stallion
+	梦伴 - 李悦君Ericaceae
+	天使的翅膀 Angel's Wing - 徐誉滕
+	Plain Jane REMIX - A$AP Ferg / Nicki Minaj
+	Iron Sky - Paolo Nutini
+	Not My Party - Strandels
+	Dancin (Krono Remix) - Aaron Smith / Luvli / Krono
+	夏日漱石 (Summer Cozy Rock) - 橘子海 (Orange Ocean)
+	Something Just Like This - The Chainsmokers / Coldplay
+	一样的月光 - 徐佳莹
+	Next To Me - Axel Johansson / Tina Stachowiak
+	Outside - Calvin Harris / Ellie Goulding
+	Remember The Summer (feat. Karra) - Ummet Ozcan / FrogMonster / Karra
+	Frankenstein - Claire Rosinkranz
+	Touch - 3LAU / Carly Paige
+	Walk Thru Fire - Vicetone / Meron Ryan`
+	
+</script>
+
+<!-- // best of best -  bestOfBest  -->
+<script>
+	// best of best 
+
+var bestOfBest = `梦伴 - 李悦君Ericaceae
+Not My Party - Strandels
+一人有一个梦想 - 黎瑞恩
+Your Man - Josh Turner
+終生老友 - 张诗莉 / 朱彦安
+Turnin' - Young Rising Sons
+手放开 - 李圣杰
+倒数 - G.E.M.邓紫棋
+Let It Die - Tayler Buono
+Why Baby Why - MyKey
+词不达意 - 林忆莲
+可爱女人 - 周杰伦
+あの頃～ジンジンバオヂュオニー～ - whiteeeen
+千千阙歌 - 陈慧娴`
+</script>
+
+
+<!-- // 等等 wait -->
+<script>
+	// 等等 
+
+	var wait = `brave heart - 宮崎歩
+痛苦之村列瑟芬 - leshphon - Dungeon and Fighter
+Bloom of Youth - 清水淳一
+朝 - ゴンチチ
+歩いても 歩いても - ゴンチチ
+Grace - Jannik
+Kiss The Rain - Yiruma
+For River - Piano (Johnny's Version) - Kan R. Gao
+To the Moon - Main Theme - Kan R. Gao
+Everything's Alright - Kan R. Gao / Laura Shigihara
+Lonely God - 惘闻
+あの夏へ - 久石譲
+久石让-千与千寻（纯音乐） - CMJ
+River Flows In You - Martin Ermen
+Late Night Melancholy - Rude Boy
+wander about - yutaka hirasaka
+eau - yutaka hirasaka
+open - yutaka hirasaka`
+</script>
+
+
+<!-- // 仓库 wareHouse -->
+<script>
+	// 仓库 
+
+	var wareHouse = `暗香 (Live) - 沙宝亮
+Call of Silence - Eternal Raijin
+寓言 - 张韶涵
+Snowy Lullaby - K.S. Project
+Turn Me Up - Carly Rae Jepsen
+一人有一个梦想 - 黎瑞恩
+You Know What? - Madeline Juno
+Like A Lady - Lady A
+Baila Conmigo - Selena Gomez / Rauw Alejandro
+Flashlight (From "Pitch Perfect 2" Soundtrack) - Jessie J
+晚风 - 7copy / BT07
+Cold - NEFFEX
+Are You With Me (Christmas Mix) - Christmas / Lost Frequencies
+Head Above Water (feat. We The Kings) - Avril Lavigne / We the Kings
+Fractures - ILLENIUM / Nevve
+我可以忘记你 - 黎明
+不了了之 - 冰淇
+Friendships - Pascal Letoublon
+年少有为 - 李荣浩
+飞蛾与花火 - Felicia蔡菲凡
+Call You Tonight - Whitney Houston
+该死的温柔 - 马天宇
+空心 - 玄子
+练习 - 刘德华
+Papa Was a Rodeo - Sara Lov
+Ich Will Immer Wieder... Dieses Fieber Spür'n - Helene Fischer
+还是分开 - 张叶蕾
+Thunder - Imagine Dragons
+认真的雪 - 薛之谦
+Into You (Acoustic Version) - Matisse & Sadko / Hanne Mjøen
+With You (Ngẫu Hứng) - Nick Strand / Hoaprox / MIO
+Highlands - Darby Devon
+Legends Never Die - Against the Current
+Wriggle (Mr Jukes Edit) - Cosmo Sheldrake / Mr Jukes
+Enemy (Arcane League of Legends) (Epic Version) - Krutikov Music
+让她降落 - 何璐
+梦伴 - 李悦君Ericaceae
+时间煮雨 - 郁可唯
+Zombie - Bad Wolves
+Smile - FRND
+Apex - Far Out
+Astronaut In The Ocean (Remix) [feat. G-Eazy & DDG] - Masked Wolf / G-Eazy / DDG
+Never Say Good Bye - Mario / NasTy
+左手指月 - 萨顶顶
+Future Funk - Varien
+勇气 - 棉子
+Scarborough Fair - Hayley Westenra
+过火 - 天台阿哲
+夏日漱石 (Summer Cozy Rock) - 橘子海 (Orange Ocean)
+Compliance - Muse
+Empire State Of Mind - Jay-Z / Alicia Keys
+谁伴我闯荡 - Beyond
+Better Now - Blanks
+What Doesn't Kill You (Stronger) - Kelly Clarkson
+This Love - Maroon 5
+Your Man - Josh Turner
+Look4You - Alberto Ciccarini
+Whatever It Takes - Imagine Dragons
+Maps - Maroon 5
+但愿人长久 - 张国荣
+終生老友 - 张诗莉 / 朱彦安
+我怀念的 - 孙燕姿
+U Make Me Wanna - Blue
+Contact - Lulleaux / Giang Pham
+ツィゴイネルワイゼン Op20 - 葉加瀬太郎
+Come to the River - Brandon Lake
+This Is It - Oh The Larceny
+More Than A Memory - Carly Rae Jepsen
+糖分とらねぇとなぁー - Audio Highs
+Reality - Lost Frequencies / Janieck
+Moves Like Jagger - Maroon 5 / Christina Aguilera
+Trespassing - Adam Lambert
+I Knew You Were Trouble. - Taylor Swift
+倒数 - G.E.M.邓紫棋
+成全 - 刘若英
+DON'T PUSH ME - sweetbox
+Why Baby Why - MyKey
+Catch My Breath - Kelly Clarkson
+匆匆那年 - 王菲
+Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) (Cedric Gervais Remix) - Lana Del Rey / Cedric Gervais
+Rhythm Of The Rain - Jason Donovan
+I Will Be OK - FlyBoy / Coby Grant  / The Onyx Twins
+Crazy In Love - Beyoncé / Jay-Z
+Immortals - Fall Out Boy
+披着羊皮的狼 - 刀郎
+满眼繁华 - 轶心
+Butter-Fly - 和田光司
+brave heart - 宮崎歩
+Laxed (Siren Beat) - Jawsh 685
+Eenie Meenie - Justin Bieber / Sean Kingston
+Wrap Me In Plastic - CHROMANCE / Marcus Layton
+Trouble Is A Friend (Album Version) - Lenka
+Rage Your Dream - m.o.v.e
+月亮惹的祸 - 张宇
+囚鸟 - 彭羚
+Firefly - A*Teens
+ひだまりの郷 - 八乙女葦菜
+人生何处不相逢 - 陈慧娴
+小酒窝 - 林俊杰 / 蔡卓妍
+烦恼歌 - 张学友
+笑忘书 - 王菲
+等一分钟 Wait One Minute - 徐誉滕
+我要飞 - F.I.R.
+花海 - 周杰伦
+Natural - Imagine Dragons
+Señorita - Camila Cabello / Shawn Mendes
+The Saltwater Room - Owl City / Breanne Düren
+爱 - 莫文蔚
+Soap - Melanie Martinez
+Edge of My Life - Manafest
+How Long - Charlie Puth
+摩诃不思议アドベンチャー!(TV ver.) - 高橋洋樹
+日不落 - 蔡依林
+Apologize - OneRepublic
+Deadman's Gun - Ashtar Command
+登录界面音乐(大转移前) - character select stage - Dungeon and Fighter
+痛苦之村列瑟芬 - leshphon - Dungeon and Fighter
+东莞 (Dong Guan) - 白纸扇（Hardcore Raver in Tears） / Yanlo
+鲁邦三世 - 吉丁Kiddin / 木秦
+不得不爱 - 潘玮柏 / 弦子
+Per Un Pugno Di Dollari (Suite) - Ennio Morricone
+Dreams - The Cranberries
+像风一样自由 - 许巍
+MOM - 蜡笔小心
+分开旅行 (翻自 刘若英/黄立行)  - 姚智鑫
+Golden Key - Isgaard
+冬眠 - 司南
+血腥爱情故事 - 张惠妹
+爱很简单 (live) - 张学友
+曾经的你 - 许巍
+故乡 - 许巍
+难忘的一天 - 许巍
+敌意 - TangoZ
+So Cold - Devon Purge
+不晚 - 田馥甄
+Bloom of Youth - 清水淳一
+朝 - ゴンチチ
+歩いても 歩いても - ゴンチチ
+Grace - Jannik
+Kiss The Rain - Yiruma
+我只在乎你 - 邓丽君
+ひとり上手 - 中島みゆき
+Nightingale - Yanni
+耍猴儿(唢呐版) - Sulatwaz
+耍猴儿 (DJ原版) - six nine
+全世界谁倾听你  - 林宥嘉
+恶作剧 - 王蓝茵
+越来越不懂 - 蔡健雅
+夏天的风 - 火羊瞌睡了
+灰色轨迹 - Beyond
+世间始终你好 - 罗文 / 甄妮
+铁血丹心 - 罗文 / 甄妮
+爱拼才会赢 - 叶启田
+天后 - Chanlex
+Wherever You Go - A Rocket to the Moon
+天空之城（经典钢琴版） - dylanf
+孩子们的理想 - 黑撒
+风的季节 - Soler
+River Flows In You - Martin Ermen
+Girls Chase Boys - Ingrid Michaelson
+All Star - Smash Mouth
+My Cookie Can - 卫兰
+被风吹过的夏天 - 林俊杰 / 金莎
+期待爱 - 林俊杰 / 金莎
+Red - Taylor Swift
+城府 - 未来
+Laxed (Siren Beat) - BIGPP
+至少还有你 - 林忆莲
+Perfect Ed Sheeran Beyoncé - Boyce Avenue
+You Belong To Me - Jason Wade
+Dancing With Your Ghost - Sasha Alex Sloan
+Daylight (Live From Paris) - Taylor Swift
+Last Christmas - Taylor Swift
+Everything's Alright - Kan R. Gao / Laura Shigihara
+birdland (taste) - yutaka hirasaka
+三万英尺 - 迪克牛仔
+The Godfather (Love Theme) - Nino Rota
+小さな恋のうた - 新垣結衣
+Nothing Lasts Forever - Maroon 5
+Katie Sky-Monsters（MushrooM remix） - MushrooM『蘑菇兄弟』
+贫民百万歌星 - MC HotDog 热狗
+你是此生最美的风景 - JS
+Anchor - Novo Amor
+射雕-平原默认区 - 小旭音乐
+Is Happiness Just a Word? (Badtape Remix) - Jedi Mind Tricks / Yes Alexander
+Typical Me - Ella Eyre
+Superstar - Beatrich
+Lil Mama - Jain
+侧脸 - 于果
+No One But You - Doug Paisley
+あの夏へ - 久石譲
+Space Bound - Eminem
+Vicetone-Way Back - Jerry's Mirror
+Don't Want to Live For Me - Moriah Peters
+久石让-千与千寻（纯音乐） - CMJ
+ブルーバード - いきものがかり
+鸿鹄之志 - 0-100 / 地下8英里 / 张愚歌 / JTK.
+Kings & Queens - Ava Max
+爱江山更爱美人 - 李丽芬
+Late Night Melancholy - Rude Boy
+美人吟 - 李玲玉
+冲动的惩罚 - 刀郎
+2002年的第一场雪 - 刀郎
+I'm 卖保险 - KnowKnow
+西海情歌 - 刀郎
+いつも何度でも - 木村弓
+Too Serious Too Soon - Gareth Gates
+想你的365天 - 李玟
+轻熟女 27 - MC HotDog 热狗 / 关彦淳
+My Life - 50 Cent / Eminem / Adam Levine
+那么骄傲 - 金海心
+情人 - Beyond
+叫爸爸 - 螺丝刀RoseDoggy
+她和她和她 - 于贞
+Lonely God - 惘闻
+返老还童 - 胡彦斌 / Jony J
+Peace&Love - Lcz小强
+Old Time Rock and Roll - Bob Seger
+eau - yutaka hirasaka
+Make You Feel My Love - Adele
+Dia 6: Gratidão ao Trabalho - Ju Marconato
+面会菜 - 林生祥
+The Sun Also Rises - 久石譲
+一眼万年 - S.H.E
+曹操 - 林俊杰
+Love In My Pocket - Rich Brian
+敞篷车 - 顽童MJ116
+Every Breath You Take - The Police
+Dead Flowers - The Rolling Stones
+不死之身 - 林俊杰
+Forgot About Dre - Dr. Dre / Eminem
+Crystal Ball - Lenka
+Let Me Down Slowly - Alec Benjamin / Alessia Cara
+地上BGM - 近藤浩治
+La légende du dragon - Various Artists
+Katmandu - Bob Seger
+Spotlight - 顽童MJ116
+I'm the One to Blame - Arden Cho
+Long Lost Sunday Morning - Tep No
+What's Up? - 4 Non Blondes
+My Personal Song - The Bosshoss
+Cruisin - Sioen
+Church - Coldplay
+River - Bishop Briggs
+Just Believe - 顽童MJ116
+Baby if, - Fayray
+信仰 - Jony J
+Syllables - 50 Cent / Stat Quo / Eminem / Jay-Z / Dr. Dre
+Almost Lover - A Fine Frenzy
+Careless Whisper - Wham!
+毕业 - MC HotDog 热狗
+贫民百万歌星 (Live版) - MC HotDog 热狗
+Exodus - Maksim Mrvica
+光年之外 - G.E.M.邓紫棋
+像我这样的人 - 毛不易
+Running - 陈冠希
+离歌 - 信乐团
+我真的受伤了 (Live) - 田馥甄
+写不完的温柔 - G.E.M.邓紫棋
+BOOM - Tiësto / Sevenn
+嗨嗨人生 - MC HotDog 热狗 / 张震岳 / 关颖
+我们毁掉的 - 金玟岐
+Letting Go - 蔡健雅
+思ひで - 鈴木常吉
+一直很安静 - 阿桑
+生生 - 林俊杰
+Towers - Frida Sundemo
+再见 小时候 - 南拳妈妈
+Amireux - Gérard Darmon
+过客 - 周思涵
+他不爱我 - 莫文蔚
+千年之恋 - F.I.R.
+Haven't Even Kissed - Moriah Peters
+答应不爱你 - 郑中基
+差不多先生过新年 - MC HotDog 热狗
+词不达意 - 林忆莲
+刺鸟 - F.I.R.
+亚特兰提斯 - F.I.R.
+Locked Away - R. City / Adam Levine
+You Are Beautiful - James Blunt
+Young For You - GALA
+眷恋 - F.I.R.
+Rock N Roll - Avril Lavigne
+Aloha Heja He - Achim Reichel
+当你孤单你会想起谁 - 张栋梁
+荆棘里的花 - F.I.R.
+布拉格广场 - 蔡依林 / 周杰伦
+江南 - 林俊杰
+そばにいるね - 青山テルマ
+等一个他 - G.E.M.邓紫棋
+双人舞 - 潘玮柏
+As Long as You Love Me - Backstreet Boys
+Lydia - F.I.R.
+Everybody (Backstreet's Back) (Radio Edit) - Backstreet Boys
+胡广生 - 任素汐
+buttercup - Jack Stauber
+Never Had A Dream Come True - S Club 7
+好心分手 - 卢巧音 / 王力宏
+Thank Me Later - Anna of the North
+哈尼宝贝 - 南征北战NZBZ
+苏菲亚的愿望 - JS
+杀破狼 - JS
+该死的温柔(live) - 马天宇
+上海滩 - 叶丽仪
+Time in a Bottle - Jim Croce
+Sweet Dreams (Are Made of This) - Eurythmics / Annie Lennox / Dave Stewart
+荣光 - 金玟岐
+Airplanes, Pt. II (feat. Eminem & Hayley Williams of Paramore) - B.o.B / Eminem / Hayley Williams
+It's a Great Situation - DJ Nas'D
+Just The Same - Charlotte Lawrence
+Siren - Kailee Morgue
+Sound Of Silence - 黎允文
+We Will Rock You (Radio Edit) - Five / Queen
+古灵精怪 - 吴艾伦 / 林静
+就是爱 - 蔡依林
+In the City (2013 Remaster) - Eagles
+Telephone - Lady Gaga / Beyoncé
+Hypnotic - Zella Day
+光 - 陈粒
+无名之辈 - 汪苏泷
+黑蝙蝠中队 - 刘德华
+All the Same to Me - Anya Marina
+ラヴ・イズ・オーヴァー - 徳永英明
+After the Afterparty - Charli XCX / Lil Yachty
+Loving Strangers - Jocelyn Pook / Russian Red
+Lost Stars - Adam Levine
+Everything I Need - Skylar Grey
+A.I.N.Y. 爱你 - G.E.M.邓紫棋
+瞎子(贵州话) - 尧十三
+Highway Don't Care - Tim McGraw / Taylor Swift / Keith Urban
+被驯服的象 - 蔡健雅
+Proud Of You - 冯曦妤
+Love Paradise - 陈慧琳
+Time after time ~花舞う街で~ - 大野爱果
+Moshi Moshi - Poppy
+Rhythm Of The Rain - The Cascades
+Revival (Interlude) - Eminem
+Young And Beautiful - Lana Del Rey
+Promise for Christmas - Angelika Vee
+I Believe (Video / Radio Mix) - Bro'Sis
+Staring at You - Diane Birch
+Butterflies - Alex Blue
+你不是真正的快乐 (Live) - G.E.M.邓紫棋
+红玫瑰 - 陈奕迅
+悟空 - 戴荃
+THE EVIL MORTY DUBSTEP RAP - None Like Joshua
+无与伦比的美丽 - 苏打绿
+掌の海 - 夏川りみ
+Radio - Lana Del Rey
+Just Like Fire (From the Original Motion Picture "Alice Through The Looking Glass") - P!nk
+淡水河边 - 戴佩妮
+荒神さま - ハンバート ハンバート
+张士超你昨天晚上到底把我家钥匙放在哪里了？ - 上海彩虹室内合唱团
+My Sweet Lord - George Harrison
+Brown Eyes - Destiny's Child
+Wolves - Selena Gomez / Marshmello
+分手快乐 - 梁静茹
+Never on Sunday - The Chordettes
+喀秋莎 - 中央乐团合唱队
+Time To Say Goodbye - Sarah Brightman
+Afro Circus/I Like To Move It - Chris Rock
+舍不得 - 弦子
+第三者的第三者 - 弦子
+Do You Feel It? - Chaos Chaos
+掉了 - 张惠妹
+西藏天边 - 弦子
+贝加尔湖畔 - 李健
+For the Damaged Coda - Blonde Redhead
+八月 - 七尾旅人
+丝路 - 梁静茹
+SWEET DROPS - PUFFY
+The Ocean (Radio Edit) - Mike Perry / SHY Martin
+Firework - Katy Perry
+喜欢你 - G.E.M.邓紫棋
+Crack a Bottle - 50 Cent / Eminem / Dr. Dre
+才华有限公司 - 金玟岐
+沿海地带 - 弦子
+X Gon' Give It To Ya - DMX
+Black Mascara - Eliane
+Hurt - Nine Inch Nails
+Goodbye Moonmen - Ryan Elder
+Baker Street - Gerry Rafferty
+Tutti Fruitti - Little Richard
+Sweet Home Alabama - Lynyrd Skynyrd
+Terryfold - Chaos Chaos
+Get Schwifty - Ryan Elder
+回忆的沙漏 (国) - G.E.M.邓紫棋
+Hurt - Johnny Cash
+Hoaprox - Ngẫu Hứng (MonBet Remix) - MonBet
+A Little Story - Valentin
+Let It Die - Tayler Buono
+寂寞星球的玫瑰 - G.E.M.邓紫棋
+漫步人生路 - 邓丽君
+放弃 - 伊稀
+Journey - Capo Productions
+【电吉他】《摇滚卡农》 - 米萧
+装修 - 金玟岐 / 董运昌
+Inspire - Capo Productions
+妈妈我电脑死机了(原死机之歌) - 烦恼的夏天
+塞纳河 - G.E.M.邓紫棋
+睡公主 - G.E.M.邓紫棋
+Good Times - Cassadee Pope
+美好的旧时光 - G.E.M.邓紫棋
+有没有人告诉你 - 陈楚生
+LAST STARDUST - Aimer
+手机 - 金玟岐
+Never Be The Same Again (Single Mix) - Lisa Lopes / Melanie C
+Oops J'Aime Pas L'Anglais ! - Gullia
+Sexual Healing - Elize
+Spongebob Remix "Krusty Krab"  - Eugene The Dream / Vine
+We Can't Stop - Miley Cyrus
+Spring In My Step - Silent Partner
+We're The Sh!t - Cady Groves
+風になる - つじあやの
+Yesterday - Anastasia Kushnir
+Perfect - J.Fla
+Beautiful Now - Zedd / Jon Bellion
+Dancing By Myself - Rebel
+California Eyes - Tash Phillips
+Solstice - K-391
+HandClap - Fitz and The Tantrums
+Wicked Wonderland (Radio Edit) - Tungevaag
+爸爸妈妈 - 李荣浩
+Faidherbe square (instrumental) - ProleteR
+It'll Only Get Better - Tayler Buono
+東京 - 山崎あおい
+Tango Azul - Guitarra Azul
+喜剧之王 - 李荣浩
+Fire - Gavin DeGraw
+からっぽ - 佐藤史果
+余波荡漾 - 田馥甄
+Stick Together - Elias Naslin
+Clsr (Aash Mehta Flip) - The Chainsmokers / Aash Mehta / Halsey
+HYDRA - MYTH & ROID
+THERE IS A REASON - 鈴木このみ
+e of s - mizuki (瑞葵) / SawanoHiroyuki[nZk]
+Hymn For The Weekend [Remix] - Alan Walker / Coldplay
+my sweetest one - Aimer
+替我爱你 - 田馥甄
+Ou Est Ma Tete? - Pink Martini
+グレゴリオ - 古川本舗 / ちびた
+Hands Up - DeafMind
+You Belong With Me - Taylor Swift
+How You Get The Girl - Taylor Swift
+Begin Again - Taylor Swift
+夏野与暗恋 - 闫东炜
+戒烟 - 李荣浩
+Jitterbug - Stepcat
+How Do You Do ? - beFour
+Monody (feat. Laura Brehm) - TheFatRat / Laura Brehm
+What Makes You Beautiful - One Direction
+Wooden Chair (feat. Marion Mayer) [Duo Version] - Angus Stone
+画 - 赵雷
+O Susanna/Camptown Races (Country Mountain Melodies Album Version) - Craig Duncan
+Right Now (Na Na Na) - Akon
+Count on Me - Connie Talbot
+花のように - 松たか子
+没有理想的人不伤心 - 新裤子
+哥 只是个传说 - 陈旭
+不分手的恋爱 - 汪苏泷
+有何不可 - 许嵩
+Tom's Diner - Gianni Kosta
+X Gon' Give It to Ya (Radio Edit) - DMX
+【3D】We Don't Talk Anymore - Nisw
+The Ordinary Rock (摇滚版普通Disco)（翻自 ilem）  - Elvins.J
+Yeah (David A Remix) - Usher / TB1
+Oh, Susanna! - Various Artists
+Manolo - Trip Lee / Lecrae
+LetTalk About A Man - Prezioso / Marvin
+She Is My Sin - Nightwish
+Old Mcdonald - Drew's Famous
+Schnappi - Joy Gruttmann
+Catch My Breath - Alex Goot / Against the Current
+Angelina - Lou Bega
+Booty Music - Deep Side
+一生有你 - 水木年华
+Try - P!nk
+Insomnia - Craig David
+Loves Me Not - t.A.T.u.
+Why Would I Ever - Paula DeAnda
+再见 - 张震岳
+Oops J'Aime Pas L'Anglais ! - Gullia
+It's Ok - DJ Maxwell
+Catch a Grenade (The Hooligans Remix) - Bruno Mars
+Man on a Mission - Oh The Larceny
+Where are you - AniFace
+风居住的街道（Piano ver） (翻自 磯村由紀子）  - 饭碗的彼岸
+Where The Hood At - DMX
+偏爱 - 张芸京
+遇见 - 孙燕姿
+Turn Down for What - DJ Snake / Lil Jon
+だんだん早くなる(cover)  - 符白牙
+Lemon（Cover 米津玄师） - 柚子茶
+Glad You Came - Boyce Avenue
+坏女孩 - 徐良 / 小凌
+素颜 - 许嵩 / 何曼婷
+What Are Words - Chris Medina
+明天过后 - 张杰
+锦里 - HOPE-T / 接个吻，开一枪
+summer - 徐梦圆
+爱我还是他 (Live) - 陶喆
+Beijing - 接个吻，开一枪 / CLARE
+Bamboo - Raujika
+Mystic Tides - FEWZ
+南锣鼓巷 - 接个吻，开一枪 / CLARE
+...Ready For It? (BloodPop® Remix) - Taylor Swift / BloodPop
+秦淮 - 冯石叶
+Whatever - 徐梦圆
+China-P - 徐梦圆
+尽管我们的手中空无一物（Cover RAM WIRE） - 柚子茶
+Wildest Dreams - Taylor Swift
+Party Shaker (Video Edit) - R.I.O. / Nicco
+ベストフレンド ~琉球ver.~ - Manami
+Hey Jude - The Beatles
+Fade国风古典(Dodie Remix) - dodie
+新长征路上的摇滚 - 崔健
+儿时的夏日 - 余日秋山
+Seven (Jiaye Reboot) - Jiaye / Tobu
+你说的 - 张学友
+To the Moon - Main Theme - Kan R. Gao
+Sakura Tears - Snigellin
+For River - Piano (Johnny's Version) - Kan R. Gao
+小さな恋のうた - 高橋李依
+World - Dio Deer
+蓝莲花 - 许巍
+La La Land - Jax
+Faded x Lose yourself 男女双声道版（ShakingHigh Remix） - ShakingHigh
+黑色梦中 - 窦唯
+高级动物 - 陈伟伦 / 郝云 / 马頔 / 邵夷贝 / 王韵壹 / 郁可唯 / 果味VC / 龙井说唱 孙旭 / 扭曲机器 / 脑浊乐队 / 好妹妹 / 莫西子诗
+不可抗拒 - 扭曲机器
+Force of Nature - Bea Miller
+Gasoline - Halsey
+不再犹豫 (Remix版) - 大鹏 / 黄贯中 / 叶世荣
+塑料袋 (嘻哈版) - 大鹏 / 乔杉 / 小青龙
+妄想感傷代償連盟 - 冬名
+Light & Your Story - 千坂
+Far Away - Julia Sheer / Kevin Littlefield
+恋人未满 - S.H.E
+晚安喵 - 艾索
+Without You - Krystl
+手纸 ~拝啓 绪五の君へ~ - Naomile
+세리아의 노래 (inst.) - Lu Sienna
+ミカヅキ Kyle Xian piano ver.（翻自 さユり）  - 点八点
+You Will Never Be - Julia Sheer
+Baby I Love You - Tiffany Alvord
+我醒着做梦 - 张学友
+Sincerely - TRUE
+Nothing on you - 邓福如 AFÜ
+寂静之空 - 傅许
+Fragments - 千坂
+水(Original Mix) - LeeAlive
+Hoaprox-Ngẫu Hứng（AJonnyCool Bootleg）（AJonnyCool remix） - 安约翰AJC
+インタビュア - H△G
+春に一番近い街 - シャノ
+嘘つき - 藤原さくら
+Feels Like Freedom - Anna Abreu
+她 - 朱婧汐Akini Jing
+夏の喚く - 邱有句
+Raise Hell - DOROTHY
+忆夏思乡 - MoreanP
+なきむしacoustic ver. （Cover 沢井美空） - 拉面儿
+風華恋 - 北乃きい
+for you（翻自 AZU） - 火西肆
+Asphyxia(窒息) - 逆时针向
+ミチノチモシーキミノキモチ - 森永千才
+春よ、来い。春天，来吧。（Cover 松任谷由実） - Akie秋绘
+君よ進め - 藤田麻衣子
+胭脂妆 - 树屋女孩 / 徐梦圆
+命に嫌われている。(cover 初音ミク) - まふまふ
+烟袋斜街 - 接个吻，开一枪
+Grade Skipping（翻自 村瀬歩） （壁咚version）  - 封茗囧菌
+China-X - 徐梦圆
+最高の片想い - タイナカ彩智
+緑の小道 - Dew
+大きな世界 - シャノ / 40mP
+梦醒时分 - 陈淑桦
+dance DANCE! - MiChi
+First Heart Break - 當山みれい
+Love Lie - MACO
+Roar - Katy Perry
+Your Money Or Your Life - Ice Cube
+Never Call You ***** Again - Miqu / 2Pac
+Luv Letter - DJ Okawari
+Arco-Iris - ABSOLUTE CASTAWAY
+At The Edge - 千坂
+彼女は旅に出る - 鎖那
+Shoop - Salt-N-Pepa
+40mP - 活动小丑×崩坏小丑（六人唱见双声道/ShakingHigh Remix） - ShakingHigh
+黒ネコのタンゴ - 大橋のぞみ
+Him & I - G-Eazy / Halsey
+After Rain -Scarlet ver.- - Aimer
+세리아의 노래 - Lu Sienna
+ONE - Aimer
+Lufthafen  루프트 하펜 - Dungeon and Fighter
+Bad Romance (Radio Edit) - Lady Gaga
+相思 - 毛阿敏
+无事生非 - 田馥甄
+Wrecking Ball - Walk off the Earth
+フリージア - Uru
+Heaven Sent - Mr. Little Jeans
+Counting Stars - Kidz Bop Kids
+キズナ - Arisa
+想い出の九十九里浜 - Mi-Ke
+As Long As You Love Me - Tiffany Alvord
+Hello, Again 〜昔からある场所〜 - My Little Lover
+僕が死のうと思ったのは - 中島美嘉
+To Hebe - 田馥甄
+Dance In The Memories - 中原めいこ
+Ref:rain - Aimer
+偷恋 - 邝美云
+Time after time ～花舞う街で～ - 倉木麻衣
+Smile - Dami Im
+花篝り - 滴草由実
+The Show - Vazquez Sounds
+花花世界 - 田馥甄
+嘘だといって(ニュー・バージョン) - 長山洋子
+Don't Wanna Know - Maroon 5
+ロビンソン - ツヅリ・ヅクリ
+Counting Stars - Simply Three
+ツキアカリのミチシルベ（Cover stereopony） - 三无MarBlue
+遠い日のNostalgia - ZARD
+風の記憶 - 熊木杏里
+Believe - 岡村孝子
+星の中の君 - Uru
+私はピアノ - 高田みづえ
+むすめ - 関取花
+サマーブリーズにのって - I WiSH
+囚鸟 (Live) - 田馥甄
+sorry for you - Various Artists
+没什么大不了（なんでもないや）（女声翻唱remix） - Maxone / 夏璃夜
+Town of Windmill - a_hisa
+This Love - Holly Starr
+I Don't Know  - 王诗安
+回到最初 - 蔡淳佳
+僕が死のうと思ったのは/曾经我也想过一了百了（Cover 中岛美嘉） - 芝麻Mochi
+Home - 王诗安
+ラッターネ - 関取花
+wait for you - Ina Wroldsen
+JOY - 石井明美
+シングル・アゲイン(’07 New Remaster) - 竹内まりや
+ありがとうあなた - 山口百恵
+Good Day - Lucky Stroke
+安静了 - S.H.E
+触电 - S.H.E
+スーツケース - 川嶋あい
+Merry Christmas - 伊藤智恵理
+恋におちて　-Fall In love- - 小林明子
+Burning - Various Artists
+Adagio for Summer Wind - 清水淳一
+湖の決心 - 山口百恵
+一直在找一个人 - 冯玮君
+Angel - 手嶌葵
+I was Dreamin’ C U Darlin’ - 植田真梨恵
+ハーフムーン・セレナーデ - 河合奈保子
+ルージュ - ちあきなおみ
+天下无贼 - 羽·泉
+Be．．． - Ms.OOJA
+What's your name？ - 少年隊
+迷い道 - 柴田淳
+無実の罪 - 小川範子
+VOLEVO UN GATTO NERO - MEG
+风になる - Cana
+Lil' Goldfish - Marika
+恋におちたら - Softly
+花咲く旅路 - 原由子
+Nobody Knows - Tammy Ying
+美麗的花～うつくしき花 - Rita
+One Day (Album Version) - Emblem3
+Demons - Anthem Lights
+Eutopia - Yoohsic Roomz
+セツナ - Sunny Day Service
+空も飛べるはず - Ms.OOJA
+The Hardest Thing - Julia Sheer
+長い間 - 夏川りみ
+I Been Hoping - Gia Farrell
+愛よ愛よ（かなよかなよ） - 夏川りみ
+長い間 - Ms.OOJA
+ぼくら（城镇青年ED）（翻自 ヘクとパスカル）  - 玖肆仟
+Blackout (My Only Love) - Pixie Lott / Kesha
+Fly - Softly
+Rain in the Park - Marika Takeuchi
+圆 - AGA
+恋におち -Fall in Love- - 徳永英明
+不再联系 - 夏天Alex
+拾忆 - 张翰
+Forever Starts Tonight - Tyler Ward
+Starin' Through My Rear View - Miqu / 2Pac / Outlawz
+Aurora Borealis - John H. Clarke
+Satisfied - Jewel
+All Of Me - Ally Rhodes
+我的秘密 - G.E.M.邓紫棋
+专属味道 - 汪苏泷 / 林希儿
+分手快乐 - 梁静茹
+Better In Time (Remix) - Eminem / Leona Lewis
+1967 - ゴンチチ
+Dangerous - Alyssa Reid / The Heist
+The Unmaking - Nichole Nordeman
+What Makes You Beautiful - Megan & Liz
+寂寞在唱歌 - 阿桑
+一直很安静 - 阿桑
+If You Could See Me Now - The Script
+You Won't Let Me - Rachael Yamagata
+万里长城永不倒 - 罗文
+7 Years - MADILYN / Josh Evans
+Run Away - Megan & Liz
+Darlin' - Emily Hearn
+Raindrops - Eliane
+仰望 - 杨丞琳
+一生所爱 - 莫文蔚
+失恋 - 草蜢
+Payphone - Cassadee Pope
+第一次 - 光良
+我们都是好孩子 - 王筝
+只对你有感觉 - 飞轮海 / 田馥甄
+星空物语 - 张翰 / 朱梓骁 / 魏晨 / 俞灏明
+情人知己 - 叶蒨文
+When You Told Me You Loved Me - Jessica Simpson
+サマータイムラブ - Shiggy Jr.
+I Saw Him - Alyna / Deema
+I Love You Forever - Jewel
+逆流成河 - 白银河
+你潇洒我漂亮 - 李玲玉
+美人吟 - 李玲玉
+Demons - Boyce Avenue / Jennel Garcia
+Super Star - S.H.E
+波斯猫 - S.H.E
+香水百合 - 张韶涵
+他还是不懂 - S.H.E
+不想长大 - S.H.E
+半糖主义 - S.H.E
+ファミリーホーム - 羽毛田丈史
+母の面影 - 羽毛田丈史
+Fight To the End 〜その日の前に〜 - 羽毛田丈史
+明日、ママがいない 〜夕日とポストと〜 - 羽毛田丈史
+客官不可以 - 徐良 / 小凌
+I Wish You Would - Taylor Swift
+Style - Taylor Swift
+有时寂寞 - 陈慧琳
+I'm Always Here -  Kelly Donovan
+刀剑如梦 - 周华健
+勇气 - 梁静茹
+Paradise - Mischa
+Nothing Hurts Like This - Slo
+All About Us - He Is We / Owl City
+弱水三千 - 周传雄
+Moon River - 手嶌葵
+当你 - 王心凌
+怎么唱情歌 - 刘惜君
+等待 - 韩磊
+一辈子的孤单 - 刘若英
+天空 - 蔡依林
+Serenade in G K.525 "Eine kleine Nachtmusik":1. Allegro - Academy of St. Martin in the Fields / Neville Marriner
+少年维特的烦恼 - 杨丞琳
+VI. Waltz 2 from Jazz Suite No. 2 (Eyes Wide Shut) - Dmitri Shostakovich
+千千阙歌 - 陈慧娴
+一个人生活 - 林凡
+有一种爱叫做放手 - 阿木
+Sparks Fly - Taylor Swift
+Mine - Taylor Swift
+柠檬草的味道 - 蔡依林
+痴心绝对 - 李圣杰
+夜夜夜夜 - 齐秦
+花香 - 周传雄
+Cancan (Orpheus in the Underworld) - Herbert von Karajan / Berliner Philharmoniker
+一生所爱 - 卢冠廷 / 莫文蔚
+向天再借五百年 - 韩磊
+Yankee Doodle - Bill Conti
+哭砂 - 黄莺莺
+前所未见 - 陈慧琳
+记事本 - 陈慧琳
+All This Time - Britt Nicole
+Sunrise - Shannon Hurley
+Born for More - Jenna Davis
+当 - 动力火车
+烟雨唱扬州 - 李殊
+姐姐妹妹站起来 - 陶晶莹
+左边 - 杨丞琳
+下沙 - 游鸿明
+为爱痴狂 - 刘若英
+爱我的人和我爱的人 - 游鸿明
+酸酸甜甜就是我 - 张含韵
+下一个天亮 - 郭静
+归去来 - 希莉娜依 / 胡兵
+爱如空气 - 孙俪
+两个人的烟火 - 黎明
+爱的双重魔力 - By2
+Monsters - Katie Sky
+Even Though I'm A Woman - Seeker Lover Keeper
+再回首 - 姜育恒
+知道 - 郭静
+不只爱情 - 区文诗
+只要有你 - 那英 / 孙楠
+我记得我爱过 - 何润东
+I MISS YOU - 群星
+愿得一人心 - 李行亮
+外滩十八号 - 男才女貌
+爱情抗体 - 许慧欣
+忘记时间 - 胡歌
+笔记 - 周笔畅
+永远永远 (原声版) - 李翊君
+爱一个人好难 - 苏永康
+手放开 - 李圣杰
+风云 - 屠洪刚
+单身情歌 - 林志炫
+相亲相爱 - 陈慧琳 / 张惠妹 / 孙楠 / 古卓文
+踏浪 - 徐怀钰
+Dance For Me Wallis - Abel Korzeniowski
+棉花糖 - 至上励合
+突然的自我 - 伍佰 & China Blue
+梦醒时分 - 伍佰 & China Blue
+爱就爱了 - 陈琳
+爱情转移 - 陈奕迅
+独立 - 蜜雪薇琪
+难念的经 - 周华健
+广东爱情故事 - 广东雨神
+妥协 - 蔡依林
+觅香 - 栗先达
+侠客行 - 虞霞 / 李小龙
+光 - 刘惜君
+生生世世爱 - 吴雨霏
+Should've Said No (Live Show / Event) - Jonas Brothers / Taylor Swift
+曾经最美 - 朱铭捷
+城里的月光 - 许美静
+我们的纪念 - 李雅微
+天涯 - 任贤齐
+最熟悉的陌生人 - 萧亚轩
+Another Red Light (Single Version) - David hodges
+怒放的生命 - 汪峰
+相见恨晚 - 彭佳慧
+亲爱的，那不是爱情 - 张韶涵
+Blank Space - Taylor Swift
+西厢 - 后弦
+마리아 (김아중) - 발라드 공장
+Highway Don't Care (feat. Taylor Swift & Keith Urban) - Tim McGraw / Taylor Swift / Keith Urban
+风的季节 - Soler
+趁早 - 张惠妹
+Stay (Album Version) - Tonya Mitchell
+恋音と雨空（Cover AAA） - 嘟比Dubi / Mokona / 云の泣 / 小五沉沉沉 / 三无MarBlue / 匀子
+Empire Of Angels - Two Steps From Hell
+青春纪念册 - 可米小子
+If I Die Young - The Band Perry
+我的未来不是梦 - 张雨生
+今生你作伴 - 陈慧琳
+いのちの名前（Cover 木村弓） - Nanaka
+My Songs Know What You Did in the Dark (Light Em Up) [String - Vitamin String Quartet
+红色石头 - 李智楠
+Undress Rehearsal - Timeflies
+今天你要嫁给我 - 蔡依林 / 陶喆
+我最亲爱的 - 张惠妹
+Over That - Emily Vaughn
+Blue Skies - Lenka
+Thursdays (Single Version) - Lovestoned
+假如 - 信乐团
+天下 - 张杰
+伤心太平洋 - 任贤齐
+Misty Mountain Hop (Remaster) - Led Zeppelin
+Trampled Under Foot (Live: O2 Arena, London - December 10, 2007) - Led Zeppelin
+红颜 - 胡彦斌
+孤单北半球 - 欧得洋
+改变自己 - 王力宏
+光荣 - BOBO
+Old Threads - Deep East Music
+倔强 - 五月天
+I wanted you - Ina Wroldsen
+Beethoven's 5 Secrets - The Piano Guys
+你不像她 - 南拳妈妈
+放生 - 范逸臣
+独家记忆 - 陈小春
+I Knew You Were Trouble - MADILYN
+Secrets - Simply Three
+I Can Love - Vicci Martinez
+The Cello Song - Steven Sharp Nelson
+爱情悬崖 - 周杰伦
+Heartbeats - Amy Deasismont
+Locked Away - Tiffany Alvord
+Dancing In The Dark - Rihanna
+One Day Too Late - Skillet
+大城小爱 - 王力宏
+姗姗 - 金玟岐
+Imagine Me Without You - Jaci Velasquez
+倒带 - 蔡依林
+One Night In 北京 - 信乐团
+I Like It Like That - Hot Chelle Rae / New Boyz
+我很快乐 - 刘惜君
+以一种假装放荡的矜持　与你告别 - Cicada
+Shut Eye - Stealing Sheep
+将军令 - 吴克群
+Send It (feat. Rich Homie Quan) - Austin Mahone / Rich Homie Quan
+God Is A Girl - W&W / Groove Coverage
+牡丹江 - 南拳妈妈
+SuperStar - Taylor Swift
+为你写诗 - 吴克群
+醉清风 (2005版) - 弦子
+Best Day Of My Life - American Authors
+Can't Complain - Relient K
+你的微笑 - F.I.R.
+Treasure - Bruno Mars
+Too Far - Anna F
+New Soul - Vox Angeli
+Love Story meets Viva La Vida - Jon Schmidt
+Wolves At The Door - Bad Seed Rising
+Battles and Wastelands - Neo Retros
+Shutterbug - Glenna
+Everything Falls - Fee
+Viva La Vida - Vitamin String Quartet
+GQ - Lola Coca
+Visions - Acreix
+Light Up - Baby Bash / Z-Ro / Berner / Baby-E
+Something Just Like This (feat. Romy Wave) - Anthony Keyrouz / Romy Wave
+The Party Troll - D1ofaquavibe
+Good Morning and Good Night - Maggie McClure
+Everybody Knows I Love You (Unplugged) - Lovebugs
+Beautiful In White (Demo) - Westlife
+Wake (Live) - Hillsong Young & Free
+Summertrain - Greyson Chance
+1972 - Jake Owen
+迫降 - 张伊美Lyla
+Hooked on a Feeling - Blue Swede
+It's Obvious - Emma Stevens
+染 - Reol
+アスノヨゾラ哨戒班。明日的夜空哨戒班（Cover IA） - Akie秋绘 / 夏璃夜
+Trouble Is A Friend - Lenka
+礼物 - 刘力扬
+Marry You - Bruno Mars
+Where'd You Go - Fort Minor / Skylar Grey
+当爱在靠近 - 刘若英
+Intro - The xx
+Better Than One - The Score
+Flying high - Good 4 Nothing
+The Right Path - Thomas Greenberg
+公公偏头痛 - 周杰伦
+Horizon - Janji
+The Day You Went Away - M2M
+白金ディスコ - 井口裕香
+Try - 派伟俊 / 周杰伦
+Havana - Camila Cabello / Young Thug
+爱我别走 - 张震岳
+孤单心事 - 蓝又时
+送别 - 亚洲天使童声合唱团
+天灰 - S.H.E
+有没有一首歌会让你想起我 - 周华健
++♂ - +α/あるふぁきゅん。
+Alone - Halsey / Big Sean / Stefflon Don
+免费教学录影带 - 周杰伦
+她的睫毛 - 周杰伦
+Come and Get Your Love - Redbone
+All I Ever Wanted Was You - Ohio Avenue
+You Never Can Tell (1964 Single Version) - Chuck Berry
+电台情歌 - 莫文蔚
+Born To Do - Steven Cooper
+小鳥のキャロル - DEPAPEPE
+TIME - DEPAPEPE
+いい日だったね。 - DEPAPEPE
+今晩はお月さん - ハンバート ハンバート
+陪你度过漫长岁月 - 陈奕迅
+僕が死のうと思ったのは - 中島美嘉
+天ノ弱（翻自 GUMI） - Akie秋绘
+California Dreaming - The Mamas & the Papas
+Sucker for You - Matt Terry
+Remember The Name (feat. Styles Of Beyond) - Fort Minor / Styles of Beyond
+Burning - Maria Arredondo
+I Just Wanna Run - The Downtown Fiction
+Until You - Shayne Ward
+極彩色 - Reol
+ステキな日曜日~Gyu Gyu グッデイ!~ (カラオケ) - 芦田愛菜
+愛菜のラブリーロックンロール. - 芦田愛菜
+雨に愿いを - 芦田愛菜
+Afterlife - Ingrid Michaelson
+Bad Romance - Jay Smith
+小さな恋のうた - Diana Garnett
+We Can't Stop - Boyce Avenue / Bea Miller
+逍遥叹 - 胡歌
+蝴蝶泉边 - 黄雅莉
+One (feat. Kinetics) - King Deco
+花香 - 许绍洋
+Let Her Go - Biscuits
+The Best Is Yet To Come - Sheppard
+しろつめくさ - ハンバート ハンバート
+问 (Live) - 梁静茹
+一直很安静 - 阿桑
+君に最後の口づけを - majiko
+偶像 - 金玟岐
+Something Just Like This - The Chainsmokers / Coldplay
+Viva La Vida - Coldplay
+奴隶 - Jony J
+Yellow - Coldplay
+Yellow - Jem
+Break Me Up - Erika Selin
+泡沫 - G.E.M.邓紫棋
+再见 - G.E.M.邓紫棋
+Listen To The Sound - Building 429
+Cry For Help - HomeTown
+Giving Up The Gun - Aaron Sprinkle
+独唱情歌 - Tank / 任家萱
+洁西卡 - Tank
+给我你的爱 - Tank
+我们小时候 - Tank
+岚 - Tank
+晴天雨 - Tank
+全世界都停电 - Tank
+非你莫属 - Tank
+会长大的幸福 - Tank
+千年泪 - Tank
+专属天使 - Tank
+三国恋 - Tank
+如果我变成回忆 - Tank
+没有管理员的公寓 - 田馥甄
+遗憾 - 田馥甄
+寂寞寂寞就好 - 田馥甄
+寂寞寂寞就好 - 田馥甄
+还是要幸福 - 田馥甄
+你太猖狂 - 田馥甄
+魔鬼中的天使 (Live) - 田馥甄
+我想我不会爱你 - 田馥甄
+这个人已经与我无关 - 田馥甄
+你快乐未必我快乐 - 田馥甄
+还是要幸福 - 田馥甄
+爱着爱着就永远 (Instrumental) - 田馥甄
+我对不起我 - 田馥甄
+离岛 - 田馥甄
+渺小 - 田馥甄
+爱着爱着就永远 - 田馥甄
+魔鬼中的天使 - 田馥甄
+小幸运 - 田馥甄
+爱笑的眼睛 - 林俊杰
+Heart Like California - Before You Exit
+アスノヨゾラ哨戒班 - Reol
+IA - アスノヨゾラ哨戒班（七人唱见双声道/ShakingHigh Remix） - ShakingHigh
+I Don't Know - WHITE JAM
+Lone Ranger - Rachel Platten
+EXEC_COSMOFLIPS/. - KOKIA
+Time Machine - Ingrid Michaelson
+生きていたんだよな - あいみょん
+Stuttering - Fefe Dobson
+Superheroes - The Script
+Take Me To Your Heart - Michael Learns To Rock
+她来听我的演唱会 - 张学友
+慢慢 - 张学友
+情书 - 张学友
+吻别 - 张学友
+The Phoenix - Fall Out Boy
+Now Or Never - Jodie Connor
+默 - 那英
+The Warrior Song - Sean Household
+My Songs Know What You Did In The Dark (Light Em Up) - Fall Out Boy
+Try Try Try - Jason Mraz
+You - 雪野五月
+巴赫平均律 - 177
+DEAR~ - NANASE
+Panama - Matteo
+So Far Away - Martin Garrix / David Guetta / Jamie Scott / Romy Dya
+Enemy - Jennifer March
+Here Without You - Tyler Ward / MADILYN
+DELICATESSEN - Generique debut
+房间 - 刘瑞琦
+One Million Butterflies - Pavla
+βios - 小林未郁
+Bauklotze - 澤野弘之 / 小林未郁
+Beyond The Memory - July
+Love Me Like You Do - Ellie Goulding
+Doom And Gloom (Jeff Bhasker Mix) - The Rolling Stones
+Shell Shocked (feat. Kill The Noise & Madsonik) - Juicy J / Kill The Noise / Ty Dolla $ign / Wiz Khalifa / Madsonik
+Waterfall - Joni
+We Are Never Ever Getting Back Together - Taylor Swift
+Complicated - Avril Lavigne
+Wish You Were Here - Avril Lavigne
+Mother (From "Kikujiro" Soundtrack) - 久石譲
+Way Back Into Love - Haley Bennett / Hugh Grant
+Look At Me Now - Charlie Puth
+I Will Be - Avril Lavigne
+White Lie - Jhameel
+浮夸 - 陈奕迅
+Pam, Pam - Noel Toto
+Edge Of My Life - Manafest
+走在冷风中 - 刘思涵
+般若心経 (cho ver.) - 薬師寺寛邦
+Back To December - Taylor Swift
+Nobody's Home - Avril Lavigne
+Carlos Gardel, Alfredo Le Pera: Por Una Cabeza - Martynas / David Garrett
+一个人想著一个人 - 曾沛慈
+Lock Me Up - The Cab
+アイロニ - H△G
+少林英雄 - 于荣光
+I'm Yours - Jason Mraz
+不要说话 - 陈奕迅
+你要的爱 - 戴佩妮
+老街 - 李荣浩
+我还想她 - 林俊杰
+最后一页 - 江语晨
+Ringtone (MetroGnome Remix) - MetroGnome
+Vi Finder Hjem - Emilie Moldow
+Release The Pain - Lora
+Shape of You - Ed Sheeran
+Everybody Hurts - Avril Lavigne
+Remember When - Avril Lavigne
+Zombie - The Cranberries
+Joe - The Cranberries
+Here With You - Asher Monroe
+Say It Right - Nelly Furtado
+Call your name - 澤野弘之 / mpi / CASG
+乱世巨星 - 陈小春
+不再犹豫 - Beyond
+冷雨夜 - Beyond
+喜欢你 - Beyond
+海阔天空 - Beyond
+真的爱你 - Beyond
+光辉岁月 - Beyond
+生如夏花 - 朴树
+平凡之路 - 朴树
+战争世界 - 姚贝娜
+Moonlight Shadow - Dana Winner
+虹之间 - 金贵晟
+Larrons En Foire - Raphaël Beau
+Stupid - Tone Damli Aaberge
+雷鳴 - キッサコ
+Will You Remember Me - Adrienne Aiken / Philip Jap / Simon Purton
+等你下课 (with 杨瑞代) - 周杰伦 / 杨瑞代
+阳光宅男 - 周杰伦
+反转地球 - 潘玮柏
+王妃 - 萧敬腾
+And The Winner Is - Gérard Darmon
+Way Back Into Love (Demo) - Hugh Grant / Drew Barrymore
+我的天空 - 南征北战NZBZ
+Everglow - Coldplay / Gwyneth Paltrow
+Try - Colbie Caillat
+My Soul - July
+Be OK - Ingrid Michaelson
+Teenage Life - Daz Sampson
+分开旅行 - 黄立行 / 刘若英
+Innocence - Avril Lavigne
+Heat - Eminem
+Gone With The Wind - Various Artists
+The Magic Flute K. 620:Overture - Various Artists
+莫扎特：《小夜曲》第一乐章 - 中国国家交响乐团
+降E大调夜曲 - Frédéric François Chopin
+天鹅湖 - 群星
+Mozart: The Magic Flute, Queen of the Night - Aria N° 14 - Edda Moser / Wolfgang Sawallisch
+拉德斯基进行曲 - Herbert von Karajan
+us feat. ゆきな - 澤田空海理
+綿雪の夢 - Crest
+自傷無色 - 花たん
+娱乐 - 金玟岐
+Lights - Ellie Goulding
+ペンパイナッポーアッポーペン(PPAP) - PIKO太郎
+Just the Way You Are - Bruno Mars
+Auf Und Auf Voll Lebenslust - Franzl Lang
+Theme from Mission: Impossible - Larry Mullen Jr.
+You've Got My Heart - Audrianna Cole
+Need Me - Eminem / P!nk
+waltz for hulot - mamerico
+Soldier - Samantha Jade
+Heroes (we could be) - Alesso / Tove Lo
+Whistle - Flo Rida
+Let Her Go - Jasmine Thompson
+Love The Way You Lie (Part II) - Rihanna / Eminem
+Sorry - Jonas Brothers
+I Will Always Love You - Whitney Houston
+Die Young - Kesha
+海に行く - 茶太
+Le Papillon - Nicolas Errèra
+That's What I Like - Bruno Mars
+指切り - misha
+Yeah! - Usher / Lil Jon / Ludacris
+Everytime - Britney Spears
+Who Let The Dogs Out - Baha Men
+Move Your Body (Alan Walker Remix) - Alan Walker / Sia
+In Your Head - Eminem
+Me Too - Meghan Trainor
+Highway Driving Car - etsuco
+Despacito (Remix) - Luis Fonsi / Daddy Yankee / Justin Bieber
+My Heart Will Go On - Céline Dion
+願桜 - GIN
+背对背拥抱 - 林俊杰
+Річка - 波丹.尤莉娅
+ここにいるよ - SoulJa / 青山テルマ
+I Could Be the One - Donna Lewis
+Where Is the Love? - Justin Timberlake / Black Eyed Peas
+Pretty Boy - M2M
+2 Soon - Jon Young
+Cry On My Shoulder - Deutschland sucht den Superstar
+我们的爱 - F.I.R.
+50 Ways to Say Goodbye - Train
+I Just Wanna Run - Kait Weston
+We Don't Talk Anymore - Charlie Puth / Selena Gomez
+Valder Fields - Tamas Wells
+Be What You Wanna Be - Darin
+Floorfiller - A*Teens
+杀破狼（Cover JS） - 元乔
+See You Again - Wiz Khalifa / Charlie Puth
+終わりの世界から - やなぎなぎ
+だんご大家族 - 茶太 / 真理絵 / くない瓜 / Rio / Morrigan / 藤枝あかね / たくまる
+愛し子よ - ルルティア
+冬花火 - 奥華子
+HOLD ME TIGHT OR DON’T - Fall Out Boy
+和现实结婚之时髦的房奴 - 黑撒
+君とSOS - MOSHIMO
+你听得到 - 周杰伦
+時雨 - 川嶋あい
+素敵だね - RIKKI
+Yesterday Once More - Carpenters
+Can't Smile Without You - Barry Manilow
+ViEW - mizuki (瑞葵) / SawanoHiroyuki[nZk]
+Larmes de caramel - Elsa Kopf
+丝路 - 排骨教主
+願い~あの頃のキミへ~ - 當山みれい
+Star Sky - Two Steps From Hell
+운명 - Why
+僕らの手には何もないけど、 - RAM WIRE
+Love The Way You Lie - Eminem / Rihanna
+I Need a Doctor - Dr. Dre / Eminem / Skylar Grey
+Time (Official) - MKJ
+いのちの名前 - 広橋真紀子
+君だったら - HAPPY BIRTHDAY
+童遊 - めらみぽっぷ
+星見る頃を過ぎても - H△G
+白雪 ~sirayuki~ - とのん
+君の知らない物語 - supercell
+Vanilla - ハルカトミユキ
+恋ノ蟲 - 花たん
+你 - GALA
+風の住む街 - 磯村由紀子
+Numb - Linkin Park
+TiK ToK - Kesha
+Walk On Water - Eminem / Beyoncé
+心拍数♯0822（翻自 初音ミク） - Akie秋绘
+10年 - 奥華子
+トイレの神様 - 植村花菜
+梦のつづき - 石野田奈津代
+あなたに出会わなければ~夏雪冬花~ - Aimer
+今夜、君の声が聞きたい - 柴田淳
+アメフラシの歌～Beautiful Rain～ (1コーラスVer.) - 前田玲奈
+腻味 - 金玟岐
+Love Love Love - 蔡依林
+海盗 - 蔡依林 / 周杰伦
+全知全能ノ樹 - 加藤有加利
+天梯 - 金玟岐
+アイシテ - nameless
+駅 - Tiara
+泣き顔スマイル - hinaco
+Enchanted - Taylor Swift
+...Ready For It? - Taylor Swift
+尽管我们手中空无一物(僕らの手には何もないけど、)（Cover RAM WIRE） - 基瘾
+明日へ架ける橋 - 倉木麻衣
+Devil's Got a Gun - Whitehorse
+風見鶏 - DEPAPEPE
+Price Tag - Jessie J / B.o.B
+Gorgeous - Taylor Swift
+fish in the pool ・花屋敷 - ヘクとパスカル
+いつも何度でも - 伊藤サチコ
+Reincarnation (土宫神楽 谏山黄泉イメージ) - yozuca* / 飛蘭
+怎么说我不爱你 - 萧敬腾
+暁の車 - FictionJunction
+Counting Down To Christmas - Campsite Dream
+トルコ行進曲 - オワタ＼(^o^) - 96猫
+Little Do You Know - Campsite Dream
+太陽と向日葵 - Flower
+Seven Nation Army - Ben l'oncle Soul
+不可逆リプレイス - MY FIRST STORY
+STYX HELIX - MYTH & ROID
+Like That - Bea Miller
+Bad At Love - Halsey
+I'm a Dreamer - Violet Days
+ロスト・バタフライ - ルルティア
+Save Me - DEAMN
+Look Out Below (Mokita Remix) - Mokita / Rumors
+Do My Thing  - Lucian
+Flower Dance - DJ Okawari
+BRE@TH//LESS - 小林未郁
+On My Own - Ashes Remain
+drop pop candy - Reol / ギガP
+Trip - Axero
+One More Night - Maroon 5
+Hall of Fame - The Script / will.i.am
+Keep Me from You (feat. ODA) - MORTEN / Oda
+If You Feel My Love (Chaow Mix) - Blaxy Girls
+ラ・タタン - Reol
+All About That Bass - Meghan Trainor
+吻得太逼真 - 张敬轩
+太早 - 刘允乐
+America 2 China - 南征北战NZBZ / Raz-B / Rick Ross
+Whiskey and Morphine - Alexander Jean
+醉长安 - 黑撒
+流★群Meteor Stream - GUMI / H.K.君(HEROAR)
+となりのトトロ - 伊藤サチコ
+No title - Reol / ギガP
+Escape - Dripice
+Refrain - 阿南亮子
+Bigger (feat. Akon) - Steven Cooper / Akon
+きらきらセレナーデ - 新谷良子
+ARIGATOU - DEPAPEPE
+心愿 - 四个女生
+ぼくら - ヘクとパスカル
+マル・マル・モリ・モリ！／薫と友樹、たまにムック。. - 芦田愛菜
+Pussyfooting - Fujiya & Miyagi
+She - Groove Coverage
+遇 - ai.mini
+Pink Champagne - Nick Lopez
+Oops - Little Mix / Charlie Puth
+So Bad - Alexander Jean
+欢沁（原曲：欢沁 林海） - 夏小舟
+狂々撫子 - 加藤有加利
+冬天的秘密 - 周传雄
+别找我麻烦 - 蔡健雅
+Hello - OMFG
+brave heart -tri.Version- - 宮崎歩
+分裂 - 周杰伦
+如果这都不算爱 - 张学友
+万里の長城 - 太田美知彦
+非科学的表裏一体 - 豚乙女
+終わりの世界から - やなぎなぎ
+杀手 - 林俊杰
+白いスーツのテーマ - 市川淳
+护花使者 - 李克勤
+想太多 - 李玖哲
+白色风车 - 周杰伦
+Mine (Illenium Remix) - ILLENIUM / Phoebe Ryan
+香草吧噗 - 南拳妈妈
+蓝色土耳其 - 周传雄
+あの頃～ジンジンバオヂュオニー～ - whiteeeen
+偏爱 - 张芸京
+七里香 - 周杰伦
+Battle Without Honor Or Humanity - 布袋寅泰
+就是爱你 - 陶喆
+愛し子よ (Ballad Ver.) - ルルティア
+夏をあきらめて - 研ナオコ
+闹够了没有 - 赖伟锋
+原谅 - 张玉华
+Counting Stars - Alex Goot / Chrissy Costanza / Kurt Hugo Schneider
+为你写诗 - 吴克群
+爱转角 - 罗志祥
+Summer Vibe (Pegato Remix) - Pegato / Walk off the Earth
+Uptown Funk - Mark Ronson / Bruno Mars
+Love mail - Nicoleta Matei
+恋愛サーキュレーション - 花澤香菜
+Breath and Life - Audiomachine
+League of Legends Epic Dubstep(LOL Remix) - ThimLife
+雪 - 杜婧荧 / 王艺翔
+痴心绝对 - 李圣杰
+月光 - 鬼束ちひろ
+约定 - 周蕙
+童话 - 光良
+关不上的窗 - 周传雄
+美人鱼 - 林俊杰
+让泪化作相思雨 - 南合文斗
+雨樱花 - F.I.R.
+樱花草 - Sweety
+青花 - 周传雄
+七月七日晴 - 许慧欣
+East of Eden - Zella Day
+那就这样吧 - 滕少
+月牙湾 - F.I.R.
+風待ち - 伍々慧
+It's My Life - Bon Jovi
+Tassel - Cymophane
+欧若拉 - 张韶涵
+クロノスタシス - きのこ帝国
+恋はヒラひらり - Goose house
+sweets parade - 花澤香菜
+Stigmata - Ceui
+A Million Lives - Jake Miller
+secret base ~君がくれたもの~ (10 years after Ver.) - 茅野愛衣 / 戸松遥 / 早見沙織
+My best friend - Tiara
+花岬 - Queen of Wand
+Light It Up - Calvo / Noubya
+寝た子を起こす子守歌 - 小川範子
+We Are Complicated (MASHUP) - Raheem D
+爱我就跟我走 - 王鹤铮
+太多 - 陈冠蒲
+Our Song - Taylor Swift
+秋桜 - 柴田淳
+大切な宝物 - ChouCho
+飞舞 - 王冰洋
+約束の海 - 伍々慧
+雨の日はワルツを踊って - 伍々慧
+キセキ - Tiara
+你那么爱她 - 李圣杰
+Look What You Made Me Do - Taylor Swift
+brave heart - 宮崎歩
+心做し - majiko
+Because of You - Kelly Clarkson
+I Want My Tears Back - Nightwish
+断点 - 张敬轩
+悲しみにさよなら - 玉置浩二
+雪の華 - 徳永英明
+冷めたスープ - 柴田淳
+不能说的秘密 - 周杰伦
+彩虹 - 周杰伦
+此生不换 - 青鸟飞鱼
+The truth that you leave - Pianoboy高至豪
+我知道 - By2
+风往北吹 - 孙楠
+明天你好 - 牛奶咖啡
+留什么给你 - 孙楠
+心墙 - 郭静
+不够成熟 - By2
+小情歌 - 苏打绿
+TALK - Sammi Sanchez
+爱丫爱丫 - By2
+杀破狼(Through The Fire Remix) - JS
+脱轨 - JS
+苏菲亚的盛宴 - JS
+Unity - TheFatRat
+小赖皮之歌Schnappi - 鳄鱼宝贝
+Świat Zapomniany - Verba
+Because of You - Josh Vietti
+それが大事 - 大事MANブラザーズバンド
+ありがとう - 大橋卓弥
+爱される花 爱されぬ花 - 中島みゆき
+Worth It - Fifth Harmony / KiD Ink
+Circle - Steven Cooper
+花咲く旅路 (原由子1991.6.1 アルバム“MOTHER”より) - 原由子
+アイロニ - majiko
+Sunny Day - Joy Williams
+Häschenparty (Album Version) - Schnuffel
+Where Is the Love - Josh Vietti
+Purple Passion - Diana Boncheva
+SAKURA - Che'Nelle
+竹田の子守呗(京都府民謡) - mammy Sino
+Heaschenlied - Schnuffel
+Hello - Barbara Opsomer
+Better with You - Kris Allen
+好きだよ。~100回の後悔~ (English Ver.) - Che'Nelle
+東京 - 柴田淳
+Floating [Original Mix(Krewella's Alive Vocal)] - Tobu / Krewella
+The End of the World - Skeeter Davis
+Creepin' up on You - Darren Hayes
+それが大事 - 川嶋あい
+异邦人 - ZARD / Tak Matsumoto
+Big Big World - Emilia
+Go Time - Mark Petrie
+Schnuffels Weihnachtslied - Schnuffel
+One For Da Money - Overground
+Antagonism - There's a Light
+Khartoum - There's a Light
+Eudaimonia - There's a Light
+Unity - There's a Light
+We Choose To Go To The Moon - There's a Light
+New Soul - Yael Naim
+面具 - 许廷铿
+Yesterday - KDrew
+Good Morning, Beautiful - Luke McMaster
+異邦人 - 柴田淳
+Croatian Rhapsody - Maksim Mrvica
+Better Me - Steven Cooper
+天后 - 陈势安
+I Dare You - Bea Miller
+烟霞 - 容祖儿
+Intro: The Dawn - Dreamtale
+Sku' Ha' Gået Hjem - Sys Bjerre
+梦 - 柴田淳
+Think Again - Kate Havnevik
+CE FRUMOASA E IUBIREA - Giulia
+太阳のラ - PoPoyans
+Fuerteventura - Russian Red
+ハーフムーン･セレナーデ - 河合奈保子
+Love the Way You Lie (Clean) - Eminem / Rihanna
+Victory - Two Steps From Hell
+Traveling Light - Joel Hanson / Sara Groves
+Toi + moi - Kids United
+The Show - Lenka
+カゲロウ - Stack
+Call Me Maybe - Carly Rae Jepsen
+mede:mede - Reol
+Hide and Seek - Lizz Robinett
+Bikini Body - Dawin / R. City
+Cynic - 闇音レンリ / ポリスピカデリー
+Closer To Me - Megan & Liz
+Любовьстрела - Daria
+Nothing To Fear - Dexter Britain
+You Are My Sunshine (Version 1) - Elizabeth Mitchell
+This Is What Makes Us Girls - Lana Del Rey
+世界は恋に落ちている -acoustic version- - かぴ
+雨き声残響 - ゆめこ
+The Diva Dance - Eric Serra
+Im Like A Bird - Nelly Furtado
+日が落ちるまで - ハンバート ハンバート
+○+● - kous / ef
+果てしない世界 - YMCK
+痛苦之村列瑟芬  - 宫无后
+그 희망의 빛 - 이카
+Dream It Possible - Delacey
+River Flows in You - Yiruma
+Небо-самолеты - Макsим
+Hjemsøkt - Sandra Lyng
+Immigrant Song (Remaster) - Led Zeppelin
+Last Chance - Alyssa Reid / JRDN
+You Don't Know Me - Ofenbach
+I Remember - MOCCA
+Es Rappelt Im Karton - Pixie Paris
+Bad Apple - Lizz Robinett
+When There Was Me And You - Vanessa Hudgens
+Need You Now (iTunes Session) - Lady A
+夜空ノムコウ - Sotte Bosse
+I Hate Myself for Loving You - Joan Jett & the Blackhearts
+歌舞伎町の女王 - 椎名林檎
+Five Hundred Miles - Justin Timberlake / Carey Mulligan / Stark Sands
+Last Reunion (Epicmusicvn Series) - Peter Roe
+Bye Bye Bye - Lovestoned
+GDFR (feat. Sage the Gemini & Lookas) - Flo Rida / Sage the Gemini / Lookas
+在他乡 - 水木年华
+十年 - 陈奕迅
+Sophia So Far - Goodnight Radio
+I Can - Steven Cooper
+Vanish (feat. KARRA) - Breathe Carolina / Crossnaders / Karra
+Jocelin - Leddra Chapman
+Seve - Tez Cadey
+aLIEz - mizuki (瑞葵) / SawanoHiroyuki[nZk]
+Star Sky - Instrumental - Two Steps From Hell
+That's The Way (I Like It) (Edit) - Various Artists
+化身孤岛的鲸 - 不才
+That's Why You Go Away - Michael Learns To Rock
+Right Here Waiting - Richard Marx
+我要你 - 任素汐
+Crazy Bird - Wild Child
+君を忘れてた - Falcom Sound Team jdk
+红色高跟鞋 - 蔡健雅
+Always Getting Over You - Angela Ammons
+心做し - 花たん
+Apologize - Timbaland / OneRepublic
+Secret - 茶太
+Bulletproof Heart [Radio Edit] - Indian Boi
+Resuscitated Hope - コミネリサ
+You Da One - Rihanna
+Sexual - NEIKED
+Work (Lost Kings Remix) - Rihanna / Lost Kings / Drake
+那年初夏 - 任然
+Little Light - Rachel Platten
+Faded - Alan Walker / Iselin Solheim
+Chain Hang Low - Jibbs
+岁月神偷 - 金玟岐
+Everybody - Ingrid Michaelson
+Payphone - Maroon 5 / Wiz Khalifa
+I Want It That Way - Backstreet Boys
+Far Away From Home - Groove Coverage
+Poker Face - Lady Gaga
+Young For You - GALA
+I Am You - Kim Taylor
+You're Beautiful - James Blunt
+You Are Not Alone - Michael Jackson
+WAIT FOR YOU - Elliott Yamin
+Here We Are Again - CAGNET
+Wrecking Ball - Frankmusik
+My Dilemma 2.0 - Selena Gomez
+Home - Michael Bublé
+Born to Do - Steven Cooper
+This Is the Life - Angie Miller
+止まない雨に花束を - nayuta
+The Rose - 手嶌葵
+Me and My Broken Heart - Push Baby
+造梦者 - 以冬
+Sky (Radio Edit) - Steerner / Martell
+Bila - Candy
+巷子里的童年 - 回音哥
+Fix - Chris Lane
+Lose Yourself - Eminem
+Little Talks - Julia Sheer / Jon D.
+たいせつなきみのために、ぼくにできるいちばんのこと (short.ver) - Duca
+逝年 - 夏小虎
+Holidays (Radio Edit) - Remady / Manu-L
+I Love You - Stewart Mac
+Turnin' - Young Rising Sons
+Love you like I do - Jamillions
+In Between The Lines - Tyrone Wells
+Counting Stars - OneRepublic
+No More - Gorgon City
+Cross My Mind - Twin Forks
+女儿情 - 李玲玉
+Rap God - Eminem
+CAGNET-Here we are again喜剧之王插曲-REMIX（方便便 Remix） - 方便便
+桜花之恋冢 ~ Flower of Life - 発熱巫女~ず
+The Next Episode - Dr. Dre / Snoop Dogg / Nate Dogg
+杀马特遇见洗剪吹 - 五色石南叶
+Close - Nick Jonas / Tove Lo
+Dilemma - Nelly / Kelly Rowland
+Crazy For You - Hedley
+Silence Looks Good On You - Rachel Taylor
+Start Of Something New - Vanessa Hudgens / Zac Efron / Drew Seeley
+Be With You - Akon
+Maps - Maroon 5
+骄傲的少年 - 南征北战NZBZ
+追梦赤子心 - GALA
+Because You Live - Jesse McCartney
+Love For That - Mura Masa / Shura
+Moves Like Jagger - Maroon 5 / Christina Aguilera
+Love Runs Out - OneRepublic
+More Than I Can Say - Leo Sayer
+醉清风 - 弦子
+Dark Side Of Power - Immediate Music
+Heaven - Helpful Friends - Sangit Om
+园游会 - 周杰伦
+可爱女人 - 周杰伦
+甜甜的 - 周杰伦
+浪漫爱 - 江语晨
+Just A Kiss - Lady A
+Sofía - Álvaro Soler
+Ode to My Family - The Cranberries
+Ein kleines Lied (Around The World) - Candee!
+Under The Influence - Eminem / D12
+Apologize - OneRepublic
+Lemon Tree - Fool's Garden
+Cake By The Ocean - DNCE
+Never Gonna Leave This Bed - Maroon 5
+Lucky Strike - Maroon 5
+La Vida Seguirá - Álvaro Soler
+Writing's On the Wall - Sam Smith
+Maps - MADILYN
+Grizzly Bear - Angus & Julia Stone
+Heartbeat - Mat Kearney
+Love Is Easy - McFly
+Better Together - Us The Duo
+We Found Love - Rihanna / Calvin Harris
+My Boyfriend Is Gay - Hailey Rowe
+Let Me Love You - DJ Snake / Justin Bieber
+Perfect Illusion - Lady Gaga
+Taste The Feeling (Avicii Vs. Conrad Sewell) - Avicii / Conrad Sewell
+Anywhere With You - The Saturdays
+Between The Raindrops - Lifehouse / Natasha Bedingfield
+Love The Way You Lie (Part III (Original Demo)) - Skylar Grey
+Love Me Harder - Ariana Grande / The Weeknd
+James Bond Theme - John Barry / Monty Norman
+Make You Miss Me - Sam Hunt
+Rolling in the Deep - Adele
+Skyfall (Full Length) - Adele
+If It Wasn't For You - Alesso
+Hands To Myself - Selena Gomez
+Starving - Hailee Steinfeld / Grey / Zedd
+Happy Ending (LA Edit) - Mika
+Shoot Love - Maroon 5
+The Feeling - Justin Bieber / Halsey
+I Just Called to Say I Love You - Stevie Wonder
+Music To Watch Boys To - Lana Del Rey
+Glad You Came - The Wanted
+As Long As You Love Me - Justin Bieber / Big Sean
+It's So Easy (1977) - Linda Ronstadt
+Domino - Jessie J
+Only Girl (In The World) - Rihanna
+Take Your Time - Sam Hunt
+How Long Will I Love You - Ellie Goulding
+Shine - Years & Years
+Because Of You - Ne-Yo
+Colors - Halsey
+Lucky (Re-Mastered Version) - Colbie Caillat / Jason Mraz
+Stay With Me - Sam Smith
+Love Me Like You Do - Ellie Goulding
+Fashion - The Royal Concept
+Do It - Missy Elliott / Nelly Furtado
+All Good Things (Come To An End) - Nelly Furtado
+Kiss It Better (R3hab Remix) - Rihanna / R3HAB
+Stay Here Forever - Jewel
+Kill for You - Skylar Grey / Eminem
+Daydreamin' - Ariana Grande
+Diet Mountain Dew - Lana Del Rey
+El Mismo Sol - Álvaro Soler
+Talking Body - Tove Lo
+Your Man - Josh Turner
+Imagination - Shawn Mendes
+Diamonds - Rihanna
+Must Be Something - The Pierces
+死了都要爱 - 信乐团
+Bubbly - Colbie Caillat
+When You Say Nothing At All - Alison Krauss
+爱我还是他 - 陶喆
+Uma Thurman - Fall Out Boy
+What Are Words - Chris Medina
+Love You Like a Love Song - Selena Gomez
+I Really Like You - Carly Rae Jepsen
+Sugar - Maroon 5
+说爱你 - 蔡依林
+飘移 - 周杰伦
+成都 - 赵雷
+Call Me Maybe - Carly Rae Jepsen
+新不了情 - 萧敬腾
+淘汰 - 陈奕迅
+阴天快乐 - 陈奕迅
+下雨天 - 南拳妈妈
+Fight!! - 芦田愛菜
+落俗 - 李荣浩
+不将就 - 李荣浩
+Seek You - Adie
+Let You Down - The Material
+High On Your Love (Instrumental Radio Mix) - Sharon Doorson
+Wonderful U (Demo Version) - AGA
+Centuries - Fall Out Boy
+冻结 - 林俊杰
+小情歌 - 苏打绿
+雨一直下 - 张宇
+メランコリック - 山根万理奈
+キミと見た花 キミと見た空 -full ver.- - 東山奈央 / 大地葉
+Spirits - KOKIA
+遠い記憶、花束の赤 feat. *染 - 澤田空海理
+kirari futari - mamerico
+明日への手紙(ドラマバージョン) - 手嶌葵
+Flower of Life - 陽花
+どうして… - めらみぽっぷ
+一番の宝物 (Original Version) - karuta
+変わり行く世界のために - 茶太
+花のうた - Meandi鸦缺
+サイ - DECO*27 / ef
+日和 - Canappeco
+きみのこえ - 川嶋あい
+電話 - 山崎あおい
+ワールド・ワイド・ボクシステム - Annabel
+恋文 - やなぎなぎ
+パズル - ENE
+蛍 - 栗プリン
+bouquet(piano arrange ver.) - うさ
+ぼうやの夢よ - 高橋李依
+いつも何度でも - 竹仲絵里
+オオカミ少年独白 - sasakure.UK / Cana
+いつもこの場所で - 彩音
+Brave Song - 多田葵
+ツギハギスタッカート - nameless
+40mP - 壊れたピエロ - Evalia
+夏令时记录(piano.ver) - ゆめこ
+花火 - 清浦夏実
+I will - Chelsy
+あなたがいた森 - 樹海
+可能世界论 - 赤髪 / なゆごろう
+今、歩き出す君へ。 - Ceui
+うれし涙 (MACO Ver.) - MACO
+キミガタメ - Suara
+絆 - miu-clips
+泣いて笑って - 佐藤史果
+After All ～綴る想い～ - 上原れな
+月の明り -ファイナルファンタジーIV 爱のテーマ- - 伊田恵美
+時を刻む唄 - Lia
+The first ending - MYTH & ROID
+夢追人 - KOKIA
+パズルガール - 鎖那
+愛してる - 高鈴
+夕顔 - 能登麻美子
+SAKURA - いきものがかり
+月光食堂 - 古川本舗 / acane_madder
+奏 (かなで) - 雨宮天
+Departures ~あなたにおくるアイの歌~ - EGOIST
+天ノ弱 piano ver - wispering
+オレンジ (Acoustic Ver.) - seven oops
+深海少女 - のぶなが
+蛍 - 藤田麻衣子
+茜さす - Aimer
+Letter Song - ヲタみん
+GALLOWS BELL - F9
+ISI - Duca
+10,000 Pesos - Beck
+ラブソング - 加治ひとみ
+恋曲1990 - 罗大佑
+Free Loop - Daniel Powter
+美丽拍挡 - 胡伟立`
+</script>
+
+<!-- // 看这里 lookHere -->
+<script>
+	// 看这里 
+
+	var lookHere = `暗香 (Live) - 沙宝亮
+两个人的烟火 - 黎明
+寓言 - 张韶涵
+欧若拉 - 张韶涵
+一人有一个梦想 - 黎瑞恩
+You Know What? - Madeline Juno
+Baila Conmigo - Selena Gomez / Rauw Alejandro
+晚风 - 7copy / BT07
+Cold - NEFFEX
+Are You With Me (Christmas Mix) - Christmas / Lost Frequencies
+Fractures - ILLENIUM / Nevve
+Wriggle (Mr Jukes Edit) - Cosmo Sheldrake / Mr Jukes
+不了了之 - 冰淇
+该死的温柔 - 马天宇
+空心 - 玄子
+练习 - 刘德华
+Resuscitated Hope - コミネリサ
+Ich Will Immer Wieder... Dieses Fieber Spür'n - Helene Fischer
+还是分开 - 张叶蕾
+Thunder - Imagine Dragons
+认真的雪 - 薛之谦
+Edge of My Life - Manafest
+Into You (Acoustic Version) - Matisse & Sadko / Hanne Mjøen
+With You (Ngẫu Hứng) - Nick Strand / Hoaprox / MIO
+Legends Never Die - Against the Current
+梦伴 - 李悦君Ericaceae
+满眼繁华 - 轶心
+Smile - FRND
+过火 - 天台阿哲
+夏日漱石 (Summer Cozy Rock) - 橘子海 (Orange Ocean)
+Empire State Of Mind - Jay-Z / Alicia Keys
+谁伴我闯荡 - Beyond
+Better Now - Blanks
+不要说话 - 陈奕迅
+What Doesn't Kill You (Stronger) - Kelly Clarkson
+This Love - Maroon 5
+Your Man - Josh Turner
+Look4You - Alberto Ciccarini
+Whatever It Takes - Imagine Dragons
+Maps - Maroon 5
+但愿人长久 - 张国荣
+終生老友 - 张诗莉 / 朱彦安
+我怀念的 - 孙燕姿
+U Make Me Wanna - Blue
+Contact - Lulleaux / Giang Pham
+Turnin' - Young Rising Sons
+Come to the River - Brandon Lake
+This Is It - Oh The Larceny
+More Than A Memory - Carly Rae Jepsen
+Reality - Lost Frequencies / Janieck
+Moves Like Jagger - Maroon 5 / Christina Aguilera
+Trespassing - Adam Lambert
+吻得太逼真 - 张敬轩
+倒数 - G.E.M.邓紫棋
+成全 - 刘若英
+DON'T PUSH ME - sweetbox
+Why Baby Why - MyKey
+Catch My Breath - Kelly Clarkson
+匆匆那年 - 王菲
+Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) (Cedric Gervais Remix) - Lana Del Rey / Cedric Gervais
+Rhythm Of The Rain - Jason Donovan
+I Will Be OK - FlyBoy / Coby Grant  / The Onyx Twins
+Laxed (Siren Beat) - BIGPP
+Crazy In Love - Beyoncé / Jay-Z
+Immortals - Fall Out Boy
+披着羊皮的狼 - 刀郎
+Butter-Fly - 和田光司
+brave heart - 宮崎歩
+Laxed (Siren Beat) - Jawsh 685
+Wrap Me In Plastic - CHROMANCE / Marcus Layton
+Trouble Is A Friend (Album Version) - Lenka
+月亮惹的祸 - 张宇
+囚鸟 - 彭羚
+Firefly - A*Teens
+Lemon Tree - Fool's Garden
+ひだまりの郷 - 八乙女葦菜
+小酒窝 - 林俊杰 / 蔡卓妍
+笑忘书 - 王菲
+说爱你 - 蔡依林
+断点 - 张敬轩
+等一分钟 Wait One Minute - 徐誉滕
+我要飞 - F.I.R.
+花海 - 周杰伦
+手放开 - 李圣杰
+Natural - Imagine Dragons
+Soap - Melanie Martinez
+摩诃不思议アドベンチャー!(TV ver.) - 高橋洋樹
+日不落 - 蔡依林
+Apologize - OneRepublic
+Deadman's Gun - Ashtar Command
+以一种假装放荡的矜持　与你告别 - Cicada
+登录界面音乐(大转移前) - character select stage - Dungeon and Fighter
+痛苦之村列瑟芬 - leshphon - Dungeon and Fighter
+东莞 (Dong Guan) - 白纸扇（Hardcore Raver in Tears） / Yanlo
+歩いても 歩いても - ゴンチチ
+鲁邦三世 - 吉丁Kiddin / 木秦
+不得不爱 - 潘玮柏 / 弦子
+Per Un Pugno Di Dollari (Suite) - Ennio Morricone
+ミチノチモシーキミノキモチ - 森永千才
+像风一样自由 - 许巍
+MOM - 蜡笔小心
+Golden Key - Isgaard
+冬眠 - 司南
+血腥爱情故事 - 张惠妹
+敌意 - TangoZ
+So Cold - Devon Purge
+不晚 - 田馥甄
+歌舞伎町の女王 - 椎名林檎
+Bloom of Youth - 清水淳一
+我最亲爱的 - 张惠妹
+朝 - ゴンチチ
+Grace - Jannik
+Kiss The Rain - Yiruma
+我只在乎你 - 邓丽君
+Nightingale - Yanni
+耍猴儿 (DJ原版) - six nine
+全世界谁倾听你  - 林宥嘉
+恶作剧 - 王蓝茵
+爱我的人和我爱的人 - 游鸿明
+Im Like A Bird - Nelly Furtado
+ラブソング - 加治ひとみ
+喜欢你 - Beyond
+世间始终你好 - 罗文 / 甄妮
+铁血丹心 - 罗文 / 甄妮
+爱拼才会赢 - 叶启田
+Wherever You Go - A Rocket to the Moon
+化身孤岛的鲸 - 不才
+天空之城（经典钢琴版） - dylanf
+孩子们的理想 - 黑撒
+Man on a Mission - Oh The Larceny
+风的季节 - Soler
+Nothing Lasts Forever - Maroon 5
+Girls Chase Boys - Ingrid Michaelson
+All Star - Smash Mouth
+My Cookie Can - 卫兰
+When There Was Me And You - Vanessa Hudgens
+被风吹过的夏天 - 林俊杰 / 金莎
+冻结 - 林俊杰
+期待爱 - 林俊杰 / 金莎
+词不达意 - 林忆莲
+Red - Taylor Swift
+秋天不回来 - 王强
+Superstar - Beatrich
+Daylight (Live From Paris) - Taylor Swift
+Last Christmas - Taylor Swift
+花火 - 清浦夏実
+Everything's Alright - Kan R. Gao / Laura Shigihara
+恋音と雨空（Cover AAA） - 嘟比Dubi / Mokona / 云の泣 / 小五沉沉沉 / 三无MarBlue / 匀子
+birdland (taste) - yutaka hirasaka
+Spirits - KOKIA
+风往北吹 - 孙楠
+三万英尺 - 迪克牛仔
+The Godfather (Love Theme) - Nino Rota
+一番の宝物 (Original Version) - karuta
+日和 - Canappeco
+Just A Kiss - Lady A
+阴天快乐 - 陈奕迅
+Katie Sky-Monsters（MushrooM remix） - MushrooM『蘑菇兄弟』
+Grade Skipping（翻自 村瀬歩） （壁咚version）  - 封茗囧菌
+贫民百万歌星 - MC HotDog 热狗
+你是此生最美的风景 - JS
+Anchor - Novo Amor
+Is Happiness Just a Word? (Badtape Remix) - Jedi Mind Tricks / Yes Alexander
+Hide and Seek - Lizz Robinett
+Typical Me - Ella Eyre
+Lil Mama - Jain
+侧脸 - 于果
+あの夏へ - 久石譲
+小さな恋のうた - Diana Garnett
+Sophia So Far - Goodnight Radio
+Don't Want to Live For Me - Moriah Peters
+Sunrise - Shannon Hurley
+2 Soon - Jon Young
+Jocelin - Leddra Chapman
+ブルーバード - いきものがかり
+Kings & Queens - Ava Max
+GDFR (feat. Sage the Gemini & Lookas) - Flo Rida / Sage the Gemini / Lookas
+爱江山更爱美人 - 李丽芬
+Late Night Melancholy - Rude Boy
+美人吟 - 李玲玉
+パズル - ENE
+冲动的惩罚 - 刀郎
+2002年的第一场雪 - 刀郎
+西海情歌 - 刀郎
+Too Serious Too Soon - Gareth Gates
+心做し - 花たん
+好心分手 - 卢巧音 / 王力宏
+想你的365天 - 李玟
+轻熟女 27 - MC HotDog 热狗 / 关彦淳
+My Life - 50 Cent / Eminem / Adam Levine
+那么骄傲 - 金海心
+情人 - Beyond
+叫爸爸 - 螺丝刀RoseDoggy
+她和她和她 - 于贞
+Lonely God - 惘闻
+那就这样吧 - 滕少
+Lemon（Cover 米津玄师） - 柚子茶
+返老还童 - 胡彦斌 / Jony J
+Paradise - Mischa
+Old Time Rock and Roll - Bob Seger
+eau - yutaka hirasaka
+一眼万年 - S.H.E
+曹操 - 林俊杰
+Love In My Pocket - Rich Brian
+敞篷车 - 顽童MJ116
+不死之身 - 林俊杰
+Love Runs Out - OneRepublic
+Dead Flowers - The Rolling Stones
+Crystal Ball - Lenka
+Let Me Down Slowly - Alec Benjamin / Alessia Cara
+La légende du dragon - Various Artists
+Love Lie - MACO
+Katmandu - Bob Seger
+Spotlight - 顽童MJ116
+I'm the One to Blame - Arden Cho
+Long Lost Sunday Morning - Tep No
+What's Up? - 4 Non Blondes
+My Personal Song - The Bosshoss
+Cruisin - Sioen
+Without You - Krystl
+死了都要爱 - 信乐团
+River - Bishop Briggs
+Baby if, - Fayray
+信仰 - Jony J
+That's The Way (I Like It) (Edit) - Various Artists
+Almost Lover - A Fine Frenzy
+月牙湾 - F.I.R.
+Careless Whisper - Wham!
+Exodus - Maksim Mrvica
+光年之外 - G.E.M.邓紫棋
+你 - GALA
+Feels Like Freedom - Anna Abreu
+离歌 - 信乐团
+フリージア - Uru
+BOOM - Tiësto / Sevenn
+The Party Troll - D1ofaquavibe
+我们毁掉的 - 金玟岐
+Letting Go - 蔡健雅
+思ひで - 鈴木常吉
+一直很安静 - 阿桑
+Vi Finder Hjem - Emilie Moldow
+Towers - Frida Sundemo
+遇 - ai.mini
+aLIEz - mizuki (瑞葵) / SawanoHiroyuki[nZk]
+I Want It That Way - Backstreet Boys
+再见 小时候 - 南拳妈妈
+Amireux - Gérard Darmon
+过客 - 周思涵
+他不爱我 - 莫文蔚
+千年之恋 - F.I.R.
+Summertrain - Greyson Chance
+你的微笑 - F.I.R.
+What Makes You Beautiful - Megan & Liz
+刺鸟 - F.I.R.
+亚特兰提斯 - F.I.R.
+淘汰 - 陈奕迅
+Need You Now (iTunes Session) - Lady A
+You Are Beautiful - James Blunt
+Where Is the Love? - Justin Timberlake / Black Eyed Peas
+Young For You - GALA
+眷恋 - F.I.R.
+雨樱花 - F.I.R.
+Rock N Roll - Avril Lavigne
+荆棘里的花 - F.I.R.
+布拉格广场 - 蔡依林 / 周杰伦
+江南 - 林俊杰
+そばにいるね - 青山テルマ
+Too Far - Anna F
+等一个他 - G.E.M.邓紫棋
+As Long as You Love Me - Backstreet Boys
+Lydia - F.I.R.
+Everybody (Backstreet's Back) (Radio Edit) - Backstreet Boys
+胡广生 - 任素汐
+buttercup - Jack Stauber
+Never Had A Dream Come True - S Club 7
+Thank Me Later - Anna of the North
+哈尼宝贝 - 南征北战NZBZ
+苏菲亚的愿望 - JS
+杀破狼 - JS
+不为谁而作的歌 - 林俊杰
+Time in a Bottle - Jim Croce
+Sweet Dreams (Are Made of This) - Eurythmics / Annie Lennox / Dave Stewart
+荣光 - 金玟岐
+Airplanes, Pt. II (feat. Eminem & Hayley Williams of Paramore) - B.o.B / Eminem / Hayley Williams
+It's a Great Situation - DJ Nas'D
+Just The Same - Charlotte Lawrence
+Siren - Kailee Morgue
+万里の長城 - 太田美知彦
+古灵精怪 - 吴艾伦 / 林静
+就是爱 - 蔡依林
+In the City (2013 Remaster) - Eagles
+Hypnotic - Zella Day
+光 - 陈粒
+无名之辈 - 汪苏泷
+腻味 - 金玟岐
+黑蝙蝠中队 - 刘德华
+All the Same to Me - Anya Marina
+ラヴ・イズ・オーヴァー - 徳永英明
+Enemy - Jennifer March
+Dream It Possible - Delacey
+After the Afterparty - Charli XCX / Lil Yachty
+Loving Strangers - Jocelyn Pook / Russian Red
+Lost Stars - Adam Levine
+Everything I Need - Skylar Grey
+A.I.N.Y. 爱你 - G.E.M.邓紫棋
+Carlos Gardel, Alfredo Le Pera: Por Una Cabeza - Martynas / David Garrett
+被驯服的象 - 蔡健雅
+Love Paradise - 陈慧琳
+Moshi Moshi - Poppy
+Rhythm Of The Rain - The Cascades
+Revival (Interlude) - Eminem
+Young And Beautiful - Lana Del Rey
+無実の罪 - 小川範子
+Promise for Christmas - Angelika Vee
+I Believe (Video / Radio Mix) - Bro'Sis
+Staring at You - Diane Birch
+Butterflies - Alex Blue
+你不是真正的快乐 (Live) - G.E.M.邓紫棋
+红玫瑰 - 陈奕迅
+无与伦比的美丽 - 苏打绿
+掌の海 - 夏川りみ
+Radio - Lana Del Rey
+Just Like Fire (From the Original Motion Picture "Alice Through The Looking Glass") - P!nk
+淡水河边 - 戴佩妮
+荒神さま - ハンバート ハンバート
+寝た子を起こす子守歌 - 小川範子
+张士超你昨天晚上到底把我家钥匙放在哪里了？ - 上海彩虹室内合唱团
+My Sweet Lord - George Harrison
+Brown Eyes - Destiny's Child
+Wolves - Selena Gomez / Marshmello
+分手快乐 - 梁静茹
+Never on Sunday - The Chordettes
+喀秋莎 - 中央乐团合唱队
+Time To Say Goodbye - Sarah Brightman
+Afro Circus/I Like To Move It - Chris Rock
+駅 - Tiara
+Love Story meets Viva La Vida - Jon Schmidt
+舍不得 - 弦子
+第三者的第三者 - 弦子
+Do You Feel It? - Chaos Chaos
+掉了 - 张惠妹
+西藏天边 - 弦子
+贝加尔湖畔 - 李健
+沿海地带 - 弦子
+For the Damaged Coda - Blonde Redhead
+We Choose To Go To The Moon - There's a Light
+丝路 - 梁静茹
+SWEET DROPS - PUFFY
+Faded x Lose yourself 男女双声道版（ShakingHigh Remix） - ShakingHigh
+The Ocean (Radio Edit) - Mike Perry / SHY Martin
+Firework - Katy Perry
+喜欢你 - G.E.M.邓紫棋
+Crack a Bottle - 50 Cent / Eminem / Dr. Dre
+才华有限公司 - 金玟岐
+Black Mascara - Eliane
+Sweet Home Alabama - Lynyrd Skynyrd
+Terryfold - Chaos Chaos
+Get Schwifty - Ryan Elder
+回忆的沙漏 (国) - G.E.M.邓紫棋
+Hoaprox - Ngẫu Hứng (MonBet Remix) - MonBet
+A Little Story - Valentin
+Oops - Little Mix / Charlie Puth
+GALLOWS BELL - F9
+寂寞星球的玫瑰 - G.E.M.邓紫棋
+漫步人生路 - 邓丽君
+放弃 - 伊稀
+爱转角 - 罗志祥
+【电吉他】《摇滚卡农》 - 米萧
+塞纳河 - G.E.M.邓紫棋
+睡公主 - G.E.M.邓紫棋
+Good Times - Cassadee Pope
+美好的旧时光 - G.E.M.邓紫棋
+有没有人告诉你 - 陈楚生
+LAST STARDUST - Aimer
+手机 - 金玟岐
+Oops J'Aime Pas L'Anglais ! - Gullia
+Release The Pain - Lora
+Spring In My Step - Silent Partner
+We're The Sh!t - Cady Groves
+Yesterday - Anastasia Kushnir
+Perfect - J.Fla
+Dancing By Myself - Rebel
+California Eyes - Tash Phillips
+Counting Stars - OneRepublic
+Solstice - K-391
+HandClap - Fitz and The Tantrums
+爸爸妈妈 - 李荣浩
+東京 - 山崎あおい
+Tango Azul - Guitarra Azul
+Intro: The Dawn - Dreamtale
+喜剧之王 - 李荣浩
+Fire - Gavin DeGraw
+からっぽ - 佐藤史果
+余波荡漾 - 田馥甄
+my sweetest one - Aimer
+Ref:rain - Aimer
+替我爱你 - 田馥甄
+It's My Life - Bon Jovi
+Ou Est Ma Tete? - Pink Martini
+グレゴリオ - 古川本舗 / ちびた
+ツギハギスタッカート - nameless
+You Belong With Me - Taylor Swift
+就是爱你 - 陶喆
+Begin Again - Taylor Swift
+茜さす - Aimer
+夏野与暗恋 - 闫东炜
+戒烟 - 李荣浩
+Departures ~あなたにおくるアイの歌~ - EGOIST
+Monody (feat. Laura Brehm) - TheFatRat / Laura Brehm
+What Makes You Beautiful - One Direction
+Breath and Life - Audiomachine
+画 - 赵雷
+きらきらセレナーデ - 新谷良子
+Wrecking Ball - Frankmusik
+Right Now (Na Na Na) - Akon
+Count on Me - Connie Talbot
+花のように - 松たか子
+没有理想的人不伤心 - 新裤子
+心拍数♯0822（翻自 初音ミク） - Akie秋绘
+哥 只是个传说 - 陈旭
+不分手的恋爱 - 汪苏泷
+有何不可 - 许嵩
+Tom's Diner - Gianni Kosta
+【3D】We Don't Talk Anymore - Nisw
+Yeah (David A Remix) - Usher / TB1
+うれし涙 (MACO Ver.) - MACO
+Catch My Breath - Alex Goot / Against the Current
+一生有你 - 水木年华
+在他乡 - 水木年华
+Why Would I Ever - Paula DeAnda
+Oops J'Aime Pas L'Anglais ! - Gullia
+Catch a Grenade (The Hooligans Remix) - Bruno Mars
+Where are you - AniFace
+Here With You - Asher Monroe
+Trip - Axero
+Sofía - Álvaro Soler
+偏爱 - 张芸京
+Glad You Came - Boyce Avenue
+坏女孩 - 徐良 / 小凌
+素颜 - 许嵩 / 何曼婷
+锦里 - HOPE-T / 接个吻，开一枪
+summer - 徐梦圆
+爱我还是他 (Live) - 陶喆
+Beijing - 接个吻，开一枪 / CLARE
+南锣鼓巷 - 接个吻，开一枪 / CLARE
+...Ready For It? (BloodPop® Remix) - Taylor Swift / BloodPop
+秦淮 - 冯石叶
+Whatever - 徐梦圆
+China-P - 徐梦圆
+尽管我们的手中空无一物（Cover RAM WIRE） - 柚子茶
+Wildest Dreams - Taylor Swift
+I Hate Myself for Loving You - Joan Jett & the Blackhearts
+Misty Mountain Hop (Remaster) - Led Zeppelin
+Hey Jude - The Beatles
+Fade国风古典(Dodie Remix) - dodie
+新长征路上的摇滚 - 崔健
+儿时的夏日 - 余日秋山
+Seven (Jiaye Reboot) - Jiaye / Tobu
+你说的 - 张学友
+一辈子的孤单 - 刘若英
+To the Moon - Main Theme - Kan R. Gao
+Sakura Tears - Snigellin
+For River - Piano (Johnny's Version) - Kan R. Gao
+Whiskey and Morphine - Alexander Jean
+小さな恋のうた - 高橋李依
+World - Dio Deer
+蓝莲花 - 许巍
+La La Land - Jax
+Force of Nature - Bea Miller
+恋人未满 - S.H.E
+세리아의 노래 (inst.) - Lu Sienna
+ミカヅキ Kyle Xian piano ver.（翻自 さユり）  - 点八点
+You Will Never Be - Julia Sheer
+ベストフレンド ~琉球ver.~ - Manami
+Baby I Love You - Tiffany Alvord
+我醒着做梦 - 张学友
+Sincerely - TRUE
+Nothing on you - 邓福如 AFÜ
+寂静之空 - 傅许
+Fragments - 千坂
+水(Original Mix) - LeeAlive
+インタビュア - H△G
+春に一番近い街 - シャノ
+春よ、来い。春天，来吧。（Cover 松任谷由実） - Akie秋绘
+君よ進め - 藤田麻衣子
+烟袋斜街 - 接个吻，开一枪
+China-X - 徐梦圆
+緑の小道 - Dew
+Luv Letter - DJ Okawari
+Roar - Katy Perry
+After Rain -Scarlet ver.- - Aimer
+세리아의 노래 - Lu Sienna
+Lufthafen  루프트 하펜 - Dungeon and Fighter
+Bad Romance (Radio Edit) - Lady Gaga
+相思 - 毛阿敏
+无事生非 - 田馥甄
+As Long As You Love Me - Tiffany Alvord
+僕が死のうと思ったのは - 中島美嘉
+To Hebe - 田馥甄
+偷恋 - 邝美云
+Time after time ～花舞う街で～ - 倉木麻衣
+Smile - Dami Im
+花篝り - 滴草由実
+花花世界 - 田馥甄
+嘘だといって(ニュー・バージョン) - 長山洋子
+前所未见 - 陈慧琳
+想太多 - 李玖哲
+囚鸟 (Live) - 田馥甄
+恋愛サーキュレーション - 花澤香菜
+sorry for you - Various Artists
+没什么大不了（なんでもないや）（女声翻唱remix） - Maxone / 夏璃夜
+Town of Windmill - a_hisa
+Home - 王诗安
+wait for you - Ina Wroldsen
+JOY - 石井明美
+Good Day - Lucky Stroke
+安静了 - S.H.E
+触电 - S.H.E
+恋におちて　-Fall In love- - 小林明子
+Burning - Various Artists
+Adagio for Summer Wind - 清水淳一
+湖の決心 - 山口百恵
+蛍 - 栗プリン
+Lil' Goldfish - Marika
+恋におちたら - Softly
+花咲く旅路 - 原由子
+Nobody Knows - Tammy Ying
+One Day (Album Version) - Emblem3
+Demons - Anthem Lights
+パズルガール - 鎖那
+Eutopia - Yoohsic Roomz
+空も飛べるはず - Ms.OOJA
+The Hardest Thing - Julia Sheer
+長い間 - 夏川りみ
+Seve - Tez Cadey
+I Been Hoping - Gia Farrell
+愛よ愛よ（かなよかなよ） - 夏川りみ
+長い間 - Ms.OOJA
+East of Eden - Zella Day
+ぼくら（城镇青年ED）（翻自 ヘクとパスカル）  - 玖肆仟
+Blackout (My Only Love) - Pixie Lott / Kesha
+Rain in the Park - Marika Takeuchi
+The Diva Dance - Eric Serra
+ワールド・ワイド・ボクシステム - Annabel
+The Monster - Eminem / Rihanna
+Forever Starts Tonight - Tyler Ward
+Starin' Through My Rear View - Miqu / 2Pac / Outlawz
+狂々撫子 - 加藤有加利
+The first ending - MYTH & ROID
+Satisfied - Jewel
+All About That Bass - Meghan Trainor
+All Of Me - Ally Rhodes
+我的秘密 - G.E.M.邓紫棋
+1967 - ゴンチチ
+If You Could See Me Now - The Script
+Darlin' - Emily Hearn
+Raindrops - Eliane
+仰望 - 杨丞琳
+一生所爱 - 莫文蔚
+Payphone - Cassadee Pope
+童话 - 光良
+星空物语 - 张翰 / 朱梓骁 / 魏晨 / 俞灏明
+情人知己 - 叶蒨文
+你潇洒我漂亮 - 李玲玉
+美人吟 - 李玲玉
+Demons - Boyce Avenue / Jennel Garcia
+Should've Said No (Live Show / Event) - Jonas Brothers / Taylor Swift
+I will - Chelsy
+客官不可以 - 徐良 / 小凌
+I Wish You Would - Taylor Swift
+Style - Taylor Swift
+7 Years - MADILYN / Josh Evans
+Moon River - 手嶌葵
+当你 - 王心凌
+天空 - 蔡依林
+VI. Waltz 2 from Jazz Suite No. 2 (Eyes Wide Shut) - Dmitri Shostakovich
+千千阙歌 - 陈慧娴
+Sparks Fly - Taylor Swift
+Mine - Taylor Swift
+柠檬草的味道 - 蔡依林
+痴心绝对 - 李圣杰
+花香 - 周传雄
+Cancan (Orpheus in the Underworld) - Herbert von Karajan / Berliner Philharmoniker
+一生所爱 - 卢冠廷 / 莫文蔚
+左边 - 杨丞琳
+下沙 - 游鸿明
+为爱痴狂 - 刘若英
+太早 - 刘允乐
+心墙 - 郭静
+下一个天亮 - 郭静
+我记得我爱过 - 何润东
+外滩十八号 - 男才女貌
+永远永远 (原声版) - 李翊君
+你那么爱她 - 李圣杰
+单身情歌 - 林志炫
+Locked Away - Tiffany Alvord
+Stay (Album Version) - Tonya Mitchell
+城里的月光 - 许美静
+Dance For Me Wallis - Abel Korzeniowski
+棉花糖 - 至上励合
+梦醒时分 - 伍佰 & China Blue
+爱就爱了 - 陈琳
+爱情转移 - 陈奕迅
+独立 - 蜜雪薇琪
+难念的经 - 周华健
+我们的纪念 - 李雅微
+亲爱的，那不是爱情 - 张韶涵
+下雨天 - 南拳妈妈
+我很快乐 - 刘惜君
+One Night In 北京 - 信乐团
+Blank Space - Taylor Swift
+西厢 - 后弦
+마리아 (김아중) - 발라드 공장
+青春纪念册 - 可米小子
+我的未来不是梦 - 张雨生
+今生你作伴 - 陈慧琳
+将军令 - 吴克群
+孤单北半球 - 欧得洋
+不将就 - 李荣浩
+倔强 - 五月天
+I wanted you - Ina Wroldsen
+你不像她 - 南拳妈妈
+放生 - 范逸臣
+独家记忆 - 陈小春
+Secrets - Simply Three
+I Can Love - Vicci Martinez
+姗姗 - 金玟岐
+倒带 - 蔡依林
+God Is A Girl - W&W / Groove Coverage
+醉清风 (2005版) - 弦子
+牡丹江 - 南拳妈妈
+为你写诗 - 吴克群
+Best Day Of My Life - American Authors
+New Soul - Vox Angeli
+Wolves At The Door - Bad Seed Rising
+Shutterbug - Glenna
+Red (Original Demo Recording) - Taylor Swift
+1972 - Jake Owen
+It's Obvious - Emma Stevens
+染 - Reol
+アスノヨゾラ哨戒班。明日的夜空哨戒班（Cover IA） - Akie秋绘 / 夏璃夜
+Trouble Is A Friend - Lenka
+Marry You - Bruno Mars
+Intro - The xx
+The Right Path - Thomas Greenberg
+Nothing To Fear - Dexter Britain
+Havana - Camila Cabello / Young Thug
+爱我别走 - 张震岳
+Alone - Halsey / Big Sean / Stefflon Don
+免费教学录影带 - 周杰伦
+她的睫毛 - 周杰伦
+Come and Get Your Love - Redbone
+All I Ever Wanted Was You - Ohio Avenue
+走在冷风中 - 刘思涵
+You Never Can Tell (1964 Single Version) - Chuck Berry
+电台情歌 - 莫文蔚
+Born To Do - Steven Cooper
+I Can - Steven Cooper
+小鳥のキャロル - DEPAPEPE
+TIME - DEPAPEPE
+いい日だったね。 - DEPAPEPE
+一直很安静 - 阿桑
+今晩はお月さん - ハンバート ハンバート
+Payphone - Maroon 5 / Wiz Khalifa
+陪你度过漫长岁月 - 陈奕迅
+僕が死のうと思ったのは - 中島美嘉
+Sucker for You - Matt Terry
+Remember The Name (feat. Styles Of Beyond) - Fort Minor / Styles of Beyond
+Burning - Maria Arredondo
+Afterlife - Ingrid Michaelson
+アイロニ - H△G
+蝴蝶泉边 - 黄雅莉
+花香 - 许绍洋
+The Best Is Yet To Come - Sheppard
+しろつめくさ - ハンバート ハンバート
+心做し - majiko
+偶像 - 金玟岐
+Something Just Like This - The Chainsmokers / Coldplay
+Hall of Fame - The Script / will.i.am
+Viva La Vida - Coldplay
+奴隶 - Jony J
+Yellow - Coldplay
+Yellow - Jem
+Free Loop - Daniel Powter
+One Million Butterflies - Pavla
+Break Me Up - Erika Selin
+泡沫 - G.E.M.邓紫棋
+再见 - G.E.M.邓紫棋
+Listen To The Sound - Building 429
+Cry For Help - HomeTown
+独唱情歌 - Tank / 任家萱
+洁西卡 - Tank
+给我你的爱 - Tank
+我们小时候 - Tank
+岚 - Tank
+晴天雨 - Tank
+全世界都停电 - Tank
+非你莫属 - Tank
+会长大的幸福 - Tank
+千年泪 - Tank
+专属天使 - Tank
+三国恋 - Tank
+如果我变成回忆 - Tank
+没有管理员的公寓 - 田馥甄
+遗憾 - 田馥甄
+寂寞寂寞就好 - 田馥甄
+寂寞寂寞就好 - 田馥甄
+还是要幸福 - 田馥甄
+你太猖狂 - 田馥甄
+魔鬼中的天使 (Live) - 田馥甄
+我想我不会爱你 - 田馥甄
+这个人已经与我无关 - 田馥甄
+你快乐未必我快乐 - 田馥甄
+你就不要想起我 (Instrumental) - 田馥甄
+还是要幸福 - 田馥甄
+爱着爱着就永远 (Instrumental) - 田馥甄
+我对不起我 - 田馥甄
+离岛 - 田馥甄
+渺小 - 田馥甄
+爱着爱着就永远 - 田馥甄
+魔鬼中的天使 - 田馥甄
+你就不要想起我 - 田馥甄
+小幸运 - 田馥甄
+白色风车 - 周杰伦
+Heart Like California - Before You Exit
+Lone Ranger - Rachel Platten
+EXEC_COSMOFLIPS/. - KOKIA
+Time Machine - Ingrid Michaelson
+生きていたんだよな - あいみょん
+Five Hundred Miles - Justin Timberlake / Carey Mulligan / Stark Sands
+Stuttering - Fefe Dobson
+Superheroes - The Script
+Stupid - Tone Damli Aaberge
+Imagination - Shawn Mendes
+Take Me To Your Heart - Michael Learns To Rock
+她来听我的演唱会 - 张学友
+慢慢 - 张学友
+情书 - 张学友
+吻别 - 张学友
+The Phoenix - Fall Out Boy
+The Warrior Song - Sean Household
+You - 雪野五月
+巴赫平均律 - 177
+You're Beautiful - James Blunt
+Річка - 波丹.尤莉娅
+DEAR~ - NANASE
+So Far Away - Martin Garrix / David Guetta / Jamie Scott / Romy Dya
+Here Without You - Tyler Ward / MADILYN
+DELICATESSEN - Generique debut
+房间 - 刘瑞琦
+βios - 小林未郁
+Love Me Like You Do - Ellie Goulding
+Doom And Gloom (Jeff Bhasker Mix) - The Rolling Stones
+Shell Shocked (feat. Kill The Noise & Madsonik) - Juicy J / Kill The Noise / Ty Dolla $ign / Wiz Khalifa / Madsonik
+Perfect - Maren Ord
+Waterfall - Joni
+We Are Never Ever Getting Back Together - Taylor Swift
+Pink Champagne - Nick Lopez
+Complicated - Avril Lavigne
+Wish You Were Here - Avril Lavigne
+Way Back Into Love - Haley Bennett / Hugh Grant
+浮夸 - 陈奕迅
+Edge Of My Life - Manafest
+Nobody's Home - Avril Lavigne
+Lock Me Up - The Cab
+I'm Yours - Jason Mraz
+你要的爱 - 戴佩妮
+老街 - 李荣浩
+我还想她 - 林俊杰
+最后一页 - 江语晨
+Ringtone (MetroGnome Remix) - MetroGnome
+Everybody Hurts - Avril Lavigne
+Zombie - The Cranberries
+Joe - The Cranberries
+Say It Right - Nelly Furtado
+All Good Things (Come To An End) - Nelly Furtado
+Call your name - 澤野弘之 / mpi / CASG
+乱世巨星 - 陈小春
+冷雨夜 - Beyond
+平凡之路 - 朴树
+虹之间 - 金贵晟
+雷鳴 - キッサコ
+阳光宅男 - 周杰伦
+反转地球 - 潘玮柏
+王妃 - 萧敬腾
+And The Winner Is - Gérard Darmon
+Way Back Into Love (Demo) - Hugh Grant / Drew Barrymore
+我的天空 - 南征北战NZBZ
+Everglow - Coldplay / Gwyneth Paltrow
+Try - Colbie Caillat
+My Soul - July
+Be OK - Ingrid Michaelson
+Teenage Life - Daz Sampson
+Es Rappelt Im Karton - Pixie Paris
+分开旅行 - 黄立行 / 刘若英
+Innocence - Avril Lavigne
+Uptown Funk - Mark Ronson / Bruno Mars
+Heat - Eminem
+Gone With The Wind - Various Artists
+The Magic Flute K. 620:Overture - Various Artists
+莫扎特：《小夜曲》第一乐章 - 中国国家交响乐团
+降E大调夜曲 - Frédéric François Chopin
+天鹅湖 - 群星
+Mozart: The Magic Flute, Queen of the Night - Aria N° 14 - Edda Moser / Wolfgang Sawallisch
+拉德斯基进行曲 - Herbert von Karajan
+The Rose - 手嶌葵
+Centuries - Fall Out Boy
+us feat. ゆきな - 澤田空海理
+綿雪の夢 - Crest
+自傷無色 - 花たん
+娱乐 - 金玟岐
+Lights - Ellie Goulding
+Just the Way You Are - Bruno Mars
+Theme from Mission: Impossible - Larry Mullen Jr.
+I Am You - Kim Taylor
+You've Got My Heart - Audrianna Cole
+Need Me - Eminem / P!nk
+Shape of You - Ed Sheeran
+waltz for hulot - mamerico
+Soldier - Samantha Jade
+Heroes (we could be) - Alesso / Tove Lo
+Whistle - Flo Rida
+Sorry - Jonas Brothers
+I Will Always Love You - Whitney Houston
+Die Young - Kesha
+海に行く - 茶太
+指切り - misha
+Everytime - Britney Spears
+Who Let The Dogs Out - Baha Men
+In Your Head - Eminem
+Highway Driving Car - etsuco
+My Heart Will Go On - Céline Dion
+願桜 - GIN
+背对背拥抱 - 林俊杰
+Big Big World - Emilia
+Pretty Boy - M2M
+Cry On My Shoulder - Deutschland sucht den Superstar
+我们的爱 - F.I.R.
+50 Ways to Say Goodbye - Train
+We Don't Talk Anymore - Charlie Puth / Selena Gomez
+Valder Fields - Tamas Wells
+Be What You Wanna Be - Darin
+Floorfiller - A*Teens
+杀破狼（Cover JS） - 元乔
+Everybody - Ingrid Michaelson
+Wonderful U (Demo Version) - AGA
+See You Again - Wiz Khalifa / Charlie Puth
+終わりの世界から - やなぎなぎ
+だんご大家族 - 茶太 / 真理絵 / くない瓜 / Rio / Morrigan / 藤枝あかね / たくまる
+愛し子よ - ルルティア
+Reincarnation (土宫神楽 谏山黄泉イメージ) - yozuca* / 飛蘭
+HOLD ME TIGHT OR DON’T - Fall Out Boy
+君とSOS - MOSHIMO
+素敵だね - RIKKI
+Yesterday Once More - Carpenters
+Can't Smile Without You - Barry Manilow
+ViEW - mizuki (瑞葵) / SawanoHiroyuki[nZk]
+丝路 - 排骨教主
+願い~あの頃のキミへ~ - 當山みれい
+Star Sky - Two Steps From Hell
+운명 - Why
+僕らの手には何もないけど、 - RAM WIRE
+Gorgeous - Taylor Swift
+Love The Way You Lie - Eminem / Rihanna
+I Need a Doctor - Dr. Dre / Eminem / Skylar Grey
+Love The Way You Lie (Part III (Original Demo)) - Skylar Grey
+Time (Official) - MKJ
+童遊 - めらみぽっぷ
+The truth that you leave - Pianoboy高至豪
+君だったら - HAPPY BIRTHDAY
+星見る頃を過ぎても - H△G
+Flower Dance - DJ Okawari
+風の住む街 - 磯村由紀子
+Numb - Linkin Park
+TiK ToK - Kesha
+Walk On Water - Eminem / Beyoncé
+10年 - 奥華子
+トイレの神様 - 植村花菜
+梦のつづき - 石野田奈津代
+あなたに出会わなければ~夏雪冬花~ - Aimer
+天ノ弱（翻自 GUMI） - Akie秋绘
+今夜、君の声が聞きたい - 柴田淳
+アメフラシの歌～Beautiful Rain～ (1コーラスVer.) - 前田玲奈
+全知全能ノ樹 - 加藤有加利
+天梯 - 金玟岐
+泣き顔スマイル - hinaco
+...Ready For It? - Taylor Swift
+Devil's Got a Gun - Whitehorse
+風見鶏 - DEPAPEPE
+Price Tag - Jessie J / B.o.B
+いつも何度でも - 伊藤サチコ
+怎么说我不爱你 - 萧敬腾
+暁の車 - FictionJunction
+Little Do You Know - Campsite Dream
+太陽と向日葵 - Flower
+I'm a Dreamer - Violet Days
+ラ・タタン - Reol
+ロスト・バタフライ - ルルティア
+Save Me - DEAMN
+drop pop candy - Reol / ギガP
+ARIGATOU - DEPAPEPE
+ぼくら - ヘクとパスカル
+别找我麻烦 - 蔡健雅
+River Flows In You - Martin Ermen
+Mine (Illenium Remix) - ILLENIUM / Phoebe Ryan
+約束の海 - 伍々慧
+雨の日はワルツを踊って - 伍々慧
+Stigmata - Ceui
+不能说的秘密 - 周杰伦
+不够成熟 - By2
+TALK - Sammi Sanchez
+爱丫爱丫 - By2
+Circle - Steven Cooper
+雪の華 - 徳永英明
+Because of You - Josh Vietti
+Worth It - Fifth Harmony / KiD Ink
+Let It Die - Tayler Buono
+アイロニ - majiko
+Where Is the Love - Josh Vietti
+Purple Passion - Diana Boncheva
+竹田の子守呗(京都府民謡) - mammy Sino
+Hello - Barbara Opsomer
+東京 - 柴田淳
+The End of the World - Skeeter Davis
+异邦人 - ZARD / Tak Matsumoto
+銀の龍の背に乗って - 中島みゆき
+New Soul - Yael Naim
+異邦人 - 柴田淳
+Croatian Rhapsody - Maksim Mrvica
+梦 - 柴田淳
+Think Again - Kate Havnevik
+Fuerteventura - Russian Red
+Toi + moi - Kids United
+ハーフムーン･セレナーデ - 河合奈保子
+Love the Way You Lie (Clean) - Eminem / Rihanna
+Victory - Two Steps From Hell
+River Flows in You - Yiruma
+Небо-самолеты - Макsим
+Immigrant Song (Remaster) - Led Zeppelin
+Little Light - Rachel Platten
+Be With You - Akon
+Daydreamin' - Ariana Grande
+Bye Bye Bye - Lovestoned
+十年 - 陈奕迅
+Bila - Candy
+Always Getting Over You - Angela Ammons
+Apologize - Timbaland / OneRepublic
+Secret - 茶太
+岁月神偷 - 金玟岐
+造梦者 - 以冬
+mede:mede - Reol
+CAGNET-Here we are again喜剧之王插曲-REMIX（方便便 Remix） - 方便便
+奏 (かなで) - 雨宮天
+Work (Lost Kings Remix) - Rihanna / Lost Kings / Drake
+追梦赤子心 - GALA
+骄傲的少年 - 南征北战NZBZ
+More Than I Can Say - Leo Sayer
+Never Gonna Leave This Bed - Maroon 5
+My Boyfriend Is Gay - Hailey Rowe
+If It Wasn't For You - Alesso
+Stay Here Forever - Jewel
+Diet Mountain Dew - Lana Del Rey
+Love Me Like You Do - Ellie Goulding
+Ode to My Family - The Cranberries
+Colors - Halsey
+I Really Like You - Carly Rae Jepsen`
+
+</script>
+
+<!-- // best - best -->
+<script>
+	// best 
+	var best = `两个人的烟火 - 黎明
+You Know What? - Madeline Juno
+晚风 - 7copy / BT07
+Fractures - ILLENIUM / Nevve
+不了了之 - 冰淇
+倒数 - G.E.M.邓紫棋
+练习 - 刘德华
+Everything's Alright - Kan R. Gao / Laura Shigihara
+Thunder - Imagine Dragons
+梦伴 - 李悦君Ericaceae
+不要说话 - 陈奕迅
+Look4You - Alberto Ciccarini
+Contact - Lulleaux / Giang Pham
+Let It Die - Tayler Buono
+DON'T PUSH ME - sweetbox
+Why Baby Why - MyKey
+Catch My Breath - Kelly Clarkson
+Rhythm Of The Rain - Jason Donovan
+I Will Be OK - FlyBoy / Coby Grant  / The Onyx Twins
+Crazy In Love - Beyoncé / Jay-Z
+Butter-Fly - 和田光司
+Golden Key - Isgaard
+brave heart - 宮崎歩
+Laxed (Siren Beat) - Jawsh 685
+Lemon Tree - Fool's Garden
+断点 - 张敬轩
+东莞 (Dong Guan) - 白纸扇（Hardcore Raver in Tears） / Yanlo
+花海 - 周杰伦
+手放开 - 李圣杰
+Soap - Melanie Martinez
+以一种假装放荡的矜持　与你告别 - Cicada
+痛苦之村列瑟芬 - leshphon - Dungeon and Fighter
+歩いても 歩いても - ゴンチチ
+不得不爱 - 潘玮柏 / 弦子
+MOM - 蜡笔小心
+冬眠 - 司南
+血腥爱情故事 - 张惠妹
+So Cold - Devon Purge
+不晚 - 田馥甄
+爱拼才会赢 - 叶启田
+歌舞伎町の女王 - 椎名林檎
+Kiss The Rain - Yiruma
+Nightingale - Yanni
+下雨天 - 南拳妈妈
+Im Like A Bird - Nelly Furtado
+ラブソング - 加治ひとみ
+喜欢你 - Beyond
+化身孤岛的鲸 - 不才
+天空之城（经典钢琴版） - dylanf
+狂々撫子 - 加藤有加利
+Man on a Mission - Oh The Larceny
+River Flows In You - Martin Ermen
+Nothing Lasts Forever - Maroon 5
+我还想她 - 林俊杰
+词不达意 - 林忆莲
+Spirits - KOKIA
+天ノ弱（翻自 GUMI） - Akie秋绘
+一番の宝物 (Original Version) - karuta
+Katie Sky-Monsters（MushrooM remix） - MushrooM『蘑菇兄弟』
+你是此生最美的风景 - JS
+Lil Mama - Jain
+Undress Rehearsal - Timeflies
+Sophia So Far - Goodnight Radio
+日和 - Canappeco
+Late Night Melancholy - Rude Boy
+美人吟 - 李玲玉
+西海情歌 - 刀郎
+心做し - 花たん
+想你的365天 - 李玟
+轻熟女 27 - MC HotDog 热狗 / 关彦淳
+情人 - Beyond
+她和她和她 - 于贞
+Lonely God - 惘闻
+情人知己 - 叶蒨文
+返老还童 - 胡彦斌 / Jony J
+Paradise - Mischa
+eau - yutaka hirasaka
+不死之身 - 林俊杰
+Crystal Ball - Lenka
+La légende du dragon - Various Artists
+Love Lie - MACO
+Spotlight - 顽童MJ116
+Long Lost Sunday Morning - Tep No
+What's Up? - 4 Non Blondes
+爱江山更爱美人 - 李丽芬
+晴天雨 - Tank
+岚 - Tank
+三国恋 - Tank
+Something Just Like This - The Chainsmokers / Coldplay
+Without You - Krystl
+Baby if, - Fayray
+That's The Way (I Like It) (Edit) - Various Artists
+Almost Lover - A Fine Frenzy
+光年之外 - G.E.M.邓紫棋
+βios - 小林未郁
+追梦赤子心 - GALA
+Vi Finder Hjem - Emilie Moldow
+过客 - 周思涵
+What Makes You Beautiful - Megan & Liz
+眷恋 - F.I.R.
+杀破狼 - JS
+不为谁而作的歌 - 林俊杰
+我们毁掉的 - 金玟岐
+荣光 - 金玟岐
+Airplanes, Pt. II (feat. Eminem & Hayley Williams of Paramore) - B.o.B / Eminem / Hayley Williams
+It's a Great Situation - DJ Nas'D
+Siren - Kailee Morgue
+古灵精怪 - 吴艾伦 / 林静
+就是爱 - 蔡依林
+Hypnotic - Zella Day
+光 - 陈粒
+腻味 - 金玟岐
+All the Same to Me - Anya Marina
+ラヴ・イズ・オーヴァー - 徳永英明
+Enemy - Jennifer March
+ロスト・バタフライ - ルルティア
+After the Afterparty - Charli XCX / Lil Yachty
+Loving Strangers - Jocelyn Pook / Russian Red
+Lost Stars - Adam Levine
+Everything I Need - Skylar Grey
+Love Paradise - 陈慧琳
+East of Eden - Zella Day
+指切り - misha
+寝た子を起こす子守歌 - 小川範子
+Young And Beautiful - Lana Del Rey
+恋におちて　-Fall In love- - 小林明子
+無実の罪 - 小川範子
+Staring at You - Diane Birch
+Monody (feat. Laura Brehm) - TheFatRat / Laura Brehm
+Perfect - Maren Ord
+グレゴリオ - 古川本舗 / ちびた
+掌の海 - 夏川りみ
+荒神さま - ハンバート ハンバート
+My Sweet Lord - George Harrison
+Brown Eyes - Destiny's Child
+Never on Sunday - The Chordettes
+We Choose To Go To The Moon - There's a Light
+Time To Say Goodbye - Sarah Brightman
+舍不得 - 弦子
+Do You Feel It? - Chaos Chaos
+再见 - G.E.M.邓紫棋
+掉了 - 张惠妹
+西藏天边 - 弦子
+The End of the World - Skeeter Davis
+For the Damaged Coda - Blonde Redhead
+The Ocean (Radio Edit) - Mike Perry / SHY Martin
+Black Mascara - Eliane
+GALLOWS BELL - F9
+Can't Smile Without You - Barry Manilow
+Think Again - Kate Havnevik
+Nothing on you - 邓福如 AFÜ
+Way Back Into Love (Demo) - Hugh Grant / Drew Barrymore
+洁西卡 - Tank
+Style - Taylor Swift
+us feat. ゆきな - 澤田空海理
+Fire - Gavin DeGraw
+Fuerteventura - Russian Red
+替我爱你 - 田馥甄
+无事生非 - 田馥甄
+It's My Life - Bon Jovi
+The Warrior Song - Sean Household
+茜さす - Aimer
+夏野与暗恋 - 闫东炜
+Mine (Illenium Remix) - ILLENIUM / Phoebe Ryan
+Colors - Halsey
+僕らの手には何もないけど、 - RAM WIRE
+心拍数♯0822（翻自 初音ミク） - Akie秋绘
+新长征路上的摇滚 - 崔健
+没有理想的人不伤心 - 新裤子
+恋人未满 - S.H.E
+my sweetest one - Aimer
+Ref:rain - Aimer
+To the Moon - Main Theme - Kan R. Gao
+Roar - Katy Perry
+一辈子的孤单 - 刘若英
+China-X - 徐梦圆
+寂寞寂寞就好 - 田馥甄
+Beijing - 接个吻，开一枪 / CLARE
+Home - 王诗安
+ベストフレンド ~琉球ver.~ - Manami`
+</script>
+
+<!-- // yourSong - yourSong  -->
+<script>
+	// yourSong 
+	var yourSong = `秋天的雨 - 爱乱跑的馒头
+我要的飞翔 - 许飞
+接受现实 - 关心妍
+不了了之 - 冰淇
+Monsters - Timeflies / Katie Sky
+嘉宾 - 路飞文
+My Heartbeat - Y Lam
+拾忆 - 张翰
+你不知道的事 - 王力宏
+我还想她 - 林俊杰
+彩虹天堂 - 刘畊宏
+哪里都是你 - 队长
+两个人的烟火 - 黎明
+爱已到尽头 - 如果云知道
+晚安 - 颜人中
+时光洪流 - 程响
+晚风 - 7copy / BT07
+知足 - 五月天
+舍不得 - 弦子
+The truth that you leave - Pianoboy高至豪
+孤勇者 - 陈奕迅
+搁浅 - 周杰伦
+Windy Hill - 羽肿
+最美的瞬间 - 真瑞
+平凡的一天 - 毛不易
+人世间 - 雷佳
+Let Me Down Slowly - Alec Benjamin / Alessia Cara
+过火 - 天台阿哲
+小酒窝 - 林俊杰 / 蔡卓妍
+屋顶 - 温岚 / 周杰伦
+Cry On My Shoulder - Deutschland sucht den Superstar
+一起向未来 - 易烊千玺
+如愿 - 萧忆情Alex
+生死相随 - 王贰浪
+雪下的时候 - 乔佳旭
+莫斯科没有眼泪 - Twins
+有形的翅膀 - 张韶涵
+阿刁 (Live) - 张韶涵
+水中花 - 郁可唯
+漠河舞厅·2022 - 柳爽
+归去来 - 希莉娜依 / 胡兵
+祖国不会忘记（翻自 韩红） - 聪聪
+吹梦到西洲 - 恋恋故人难 / 黄诗扶 / 妖扬
+我们说好的 - 彭芳
+贝加尔湖畔 - 李健
+逆行者《烈火英雄》主题曲 - 张文汇
+Gone With The Wind - Various Artists
+江上晚风吟 - 小田音乐社 / 尹昔眠
+从开始到现在 - 黄致列
+星河万里 - Rom邢锐
+Señorita - Shawn Mendes / Camila Cabello
+来晚 - 闪闪
+爱人错过 (Live) - 刘逸云 Amber Liu
+Summer (Summer) - Snowprint
+阴天快乐 - 陈奕迅
+TVエンディングテーマ - 吉田潔
+齿轮(钢琴版)-《还珠格格》插曲（翻自 赵薇） - 浅绯色的喵
+天下有情人 - 周华健 / 齐豫
+It's Not Good-Bye - Laura Pausini
+最爱 - 周慧敏
+Річка - 波丹.尤莉娅
+坦白 - 大壮
+你不是真正的快乐 (Live) - G.E.M.邓紫棋
+泡沫 - G.E.M.邓紫棋 / 余赛亚 / 戴斯琪 / 肖茗
+光年之外 - G.E.M.邓紫棋 / 余赛亚
+【钢琴】清晨（班得瑞） - 弹钢琴的楠楠
+永不失联的爱 - 周兴哲
+着迷 - 胜屿
+Exodus - Maksim Mrvica
+《夜色钢琴曲》秋日私语 - 赵海洋
+曾经的你 - 许巍
+平凡之路(电影版) - 朴树
+只要平凡 - 张杰 / 张碧晨
+唱得响亮 - 安又琪
+大鱼 - 周深
+最好的未来 - 刘若英 / 乔木楠
+我走后 - 小咪
+天地无霜 - 邓伦
+左手指月 - 萨顶顶
+不染 - 毛不易
+有幸 - 赵砚卿
+Love Story - Indila
+Illusionary Daytime - Shirfine
+喜剧之王插曲 - Here We Are Again - 凉城
+红昭愿 - 音阙诗听
+那些你很冒险的梦 - 林俊杰
+爱情小丑 - 廖晶
+九张机（《双世宠妃》主题曲）（Cover 叶炫清） - 王梓钰
+Faded - Alan Walker / Iselin Solheim
+三生三世 (Cover 张杰) - 万辰
+说谎 - 林宥嘉
+丑八怪 - 薛之谦
+你还要我怎样 - 薛之谦
+刚刚好 - 薛之谦
+绅士 - 薛之谦
+演员 - 薛之谦
+范玮琪 - 一个像夏天一个像秋天 - San ves / 张雯倩
+醉赤壁 - 林俊杰
+关键词 - 林俊杰
+心墙 - 林俊杰
+美人鱼 - 林俊杰
+当你 - 林俊杰
+她说 - 林俊杰
+可惜没如果 - 林俊杰
+阴天 - 莫文蔚
+老街 - 李荣浩
+不仅仅是喜欢（翻自 萧全）  - 阮豆
+恋歌 - 香香
+追光者 - 岑宁儿
+忠贞 - 盛一伦
+剪爱 - 张惠妹
+说散就散 - 袁娅维TIA RAY
+最美的期待 - 周笔畅
+就是爱你 - 陶喆
+勇气 - 梁静茹
+此生不换 - 青鸟飞鱼
+只要有你 - 那英 / 孙楠
+一辈子的孤单 - 刘若英
+后来 - 刘若英
+还是要幸福 - 田馥甄
+前所未见 - 陈慧琳
+小幸运 - 田馥甄
+嘘だといって(ニュー・バージョン) - 長山洋子
+爱我的人和我爱的人 - 游鸿明
+酸酸甜甜就是我 - 张含韵
+忘记时间 - 胡歌
+爱情转移 - 陈奕迅
+天高地厚 - 信乐团
+曾经最美 - 朱铭捷
+城里的月光 - 许美静
+我们的纪念 - 李雅微
+今生你作伴 - 陈慧琳
+最熟悉的陌生人 - 萧亚轩
+相见恨晚 - 彭佳慧
+亲爱的，那不是爱情 - 张韶涵
+下雨天 - 南拳妈妈
+我很快乐 - 刘惜君
+倒带 - 蔡依林
+慢慢 - 张学友
+吻别 - 张学友
+分开旅行 - 黄立行 / 刘若英
+Black Black Heart - David Usher / Jeff Pearce
+江南 - 林俊杰
+走在冷风中 - 刘思涵
+Five Hundred Miles - Justin Timberlake / Carey Mulligan / Stark Sands
+Be What You Wanna Be - Darin`
+</script>
+
+<!-- // japan - japanGirl -->
+<script>
+	// japan 
+	var japanGirl = `日が落ちるまで - ハンバート ハンバート
+ロスト・バタフライ - ルルティア
+太陽と向日葵 - Flower
+風になる - つじあやの
+君だったら - HAPPY BIRTHDAY
+からっぽ - 佐藤史果
+きらきらセレナーデ - 新谷良子
+花のように - 松たか子
+泣き顔スマイル - hinaco
+夢と葉桜 - ヲタみん
+海に行く - 茶太
+ベストフレンド ~琉球ver.~ - Manami
+没什么大不了（なんでもないや）（女声翻唱remix） - Maxone / 夏璃夜
+Sincerely - TRUE
+春に一番近い街 - シャノ
+for you（翻自 AZU） - 火西肆
+春よ、来い。春天，来吧。（Cover 松任谷由実） - Akie秋绘
+緑の小道 - Dew
+Ref:rain - Aimer
+After Rain -Scarlet ver.- - Aimer
+Be．．． - Ms.OOJA
+Fly - Softly
+小さなてのひら - riya
+狂々撫子 - 加藤有加利
+Moon River - 手嶌葵
+恋音と雨空（Cover AAA） - 嘟比Dubi / Mokona / 云の泣 / 小五沉沉沉 / 三无MarBlue / 匀子
+なきむし（Cover 沢井美空） - 十九遥
+Cliche - Pile
+染 - Reol
+アスノヨゾラ哨戒班。明日的夜空哨戒班（Cover IA） - Akie秋绘 / 夏璃夜
+mede:mede - Reol
+アイロニ - majiko
+生きていたんだよな - あいみょん
+今晩はお月さん - ハンバート ハンバート
+ラ・タタン - Reol
+僕らの手には何もないけど、 - RAM WIRE
+僕が死のうと思ったのは - 中島美嘉
+天ノ弱（翻自 GUMI） - Akie秋绘
+ツキアカリのミチシルベ (TV size) - ステレオポニー
+again 〜YUI Acoustic Version〜 - YUI
+泥だんごの天才いたよね - あいみょん
+懺悔録 - 黒木渚
+my sweetest one - Aimer
+情熱と残響[Acoustic ver] - ちびた
+終わりの世界から - やなぎなぎ
+愛し子よ - ルルティア
+冬花火 - 奥華子
+Reincarnation (土宫神楽 谏山黄泉イメージ) - yozuca* / 飛蘭
+The Rose - 手嶌葵
+lyric - 茶太
+涙の記憶 - eufonius
+里の秋 - mammy Sino
+小さなてのひら - Lia
+おかえりなさい. - 柴田淳
+グレゴリオ - 古川本舗 / ちびた
+あやとり - 諫山実生
+素敵だね - RIKKI
+ISI - Duca
+GALLOWS BELL - F9
+遠い記憶、花束の赤 feat. *染 - 澤田空海理
+酔恋花 -suirenka- - Stack
+君ノ記憶 - mao
+kirari futari - mamerico
+明日への手紙(ドラマバージョン) - 手嶌葵
+Echo - Reol
+Nico - advantage Lucy
+Flower of Life - 陽花
+どうして… - めらみぽっぷ
+一番の宝物 (Original Version) - karuta
+変わり行く世界のために - 茶太
+花のうた - Meandi鸦缺
+サイ - DECO*27 / ef
+日和 - Canappeco
+きみのこえ - 川嶋あい
+電話 - 山崎あおい
+ワールド・ワイド・ボクシステム - Annabel
+恋文 - やなぎなぎ
+パズル - ENE
+蛍 - 栗プリン
+遇见 - shourei小N
+bouquet(piano arrange ver.) - うさ
+ぼうやの夢よ - 高橋李依
+いつも何度でも - 竹仲絵里
+オオカミ少年独白 - sasakure.UK / Cana
+いつもこの場所で - 彩音
+Brave Song - 多田葵
+ツギハギスタッカート - nameless
+月の雫 - Φ串Φ
+40mP - 壊れたピエロ - Evalia
+夏令时记录(piano.ver) - ゆめこ
+花火 - 清浦夏実
+I will - Chelsy
+あなたがいた森 - 樹海
+可能世界论 - 赤髪 / なゆごろう
+今、歩き出す君へ。 - Ceui
+うれし涙 (MACO Ver.) - MACO
+キミガタメ - Suara
+絆 - miu-clips
+泣いて笑って - 佐藤史果
+After All ～綴る想い～ - 上原れな
+月の明り -ファイナルファンタジーIV 爱のテーマ- - 伊田恵美
+時を刻む唄 - Lia
+The first ending - MYTH & ROID
+夢追人 - KOKIA
+パズルガール - 鎖那
+愛してる - 高鈴
+夕顔 - 能登麻美子
+SAKURA - いきものがかり
+月光食堂 - 古川本舗 / acane_madder
+Departures ~あなたにおくるアイの歌~ - EGOIST
+天ノ弱 piano ver - wispering
+オレンジ (Acoustic Ver.) - seven oops
+深海少女 - のぶなが
+蛍 - 藤田麻衣子
+茜さす - Aimer
+Letter Song - ヲタみん
+奏 (かなで) - 雨宮天`
+</script>
+
+
+<!-- // guitar - guitar  -->
+<script>
+	// guitar 
+	var guitar = `翼~you are the HERO~ - 押尾コータロー
+Landscape - 押尾コータロー
+いい日だったね。 - DEPAPEPE
+風待ち - 伍々慧
+紫陽花 - GIN
+雲の上を散歩 - 岡崎倫典
+願桜 - GIN
+春、来る - 岸部眞明
+雨の日はワルツを踊って - 伍々慧
+桜・咲くころ - 押尾コータロー
+少年の梦 - 岸部眞明
+奇迹の山 - 岸部眞明
+流れ行く云 - 岸部眞明
+君と僕 - 松井祐貴
+今はその剣を置いて - 川井憲次
+家路 - 押尾コータロー
+黄昏 - 押尾コータロー
+約束の海 - 伍々慧
+花 - 岸部眞明
+風見鶏 - DEPAPEPE
+風の詩 - 押尾コータロー
+プロポーズ - 春畑道哉
+ナユタ - 押尾コータロー
+カノン - 押尾コータロー
+昭和ロマンス - 岸部眞明
+夜螢光～Auld Lang Syne -bossa style- (off vocal) - TUMENECO
+Titanium - Mike Dawes
+Secret Base (吉他版) - uBio高尾和树
+Joy & Sorrow - Trace Bundy
+Elephant King - Trace Bundy
+Time travel - 岸部眞明
+Since We Met - Tommy Emmanuel
+Rylynn - Andy McKee
+November - 岸部眞明
+North Line - GIN
+Moon River - 伍々慧
+LOVIN' YOU - 押尾コータロー
+Canon - Trace Bundy
+Padim's in the Night - Daniel Padim
+Longing - GIN
+Aurora Borealis - John H. Clarke
+Dandelion - 岸部眞明
+Brand New Wings - 押尾コータロー
+O Susanna/Camptown Races (Country Mountain Melodies Album Version) - Craig Duncan
+As We Go - Craig D'Andrea
+These Moments - Antoine Dufour
+Paradise - Luca Stricagnoli
+Waiting for You - Daniel Padim
+START - DEPAPEPE
+eternal moment - yutaka hirasaka
+Friend - 松井祐貴
+CLOSE TO YOU - 押尾コータロー
+Night street - 松井祐貴`
+</script>
+
+
+
+<script>
+	
+	
+
+
+// var arr = guitar.split('\n')
+// console.log(arr)
+// for(var i = 0; i < ArrTitle.length; i++){
+// 	console.log(ArrTitle[i])
+// }
+
+
+// 正式代码 
+
+
+$(document).ready(function(){
+ 
+
+	var ListData = [
+		{
+			title : '我喜欢的',
+			list : ilikeSong,
+			class : 'ilikeSong'
+		},
+		{
+			title : 'bestOfBest',
+			list : bestOfBest,
+			class : 'bestOfBest'
+		},
+		{
+			title : '等等',
+			list : wait,
+			class : 'wait'
+		},
+		{
+			title : '仓库',
+			list : wareHouse,
+			class : 'wareHouse'
+		},
+		{
+			title : '看这里',
+			list : lookHere,
+			class : 'lookHere'
+		},
+		{
+			title : 'best',
+			list : best,
+			class : 'best'
+		},
+		{
+			title : '你唱歌用的',
+			list : yourSong,
+			class : 'yourSong'
+		},
+		{
+			title : '日系女声',
+			list : japanGirl,
+			class : 'japanGirl'
+		},
+		{
+			title : '吉他纯音',
+			list : guitar,
+			class : 'guitar'
+		}
+	]
+
+	// 根据数据插入新元素 
+
+for(var i= 0; i< ListData.length; i++){
+
+	var navLi;
+
+	// 添加 nav 
+	if(i == 0){
+		navLi = '<li role="presentation" class="active"><a href="#'+ListData[i].class+'" aria-controls="'+ListData[i].class+'" role="tab" data-toggle="tab">'+ListData[i].title+'</a></li>'
+	}else{
+		navLi = '<li role="presentation"><a href="#'+ListData[i].class+'" aria-controls="'+ListData[i].class+'" role="tab" data-toggle="tab">'+ListData[i].title+'</a></li>'
+	}
+
+	$('.nav-tabs').append(navLi)
+
+	// 添加内容容器 
+
+// 1.先拼接内容 
+
+
+var trs = '';
+var slist = ListData[i].list.split('\n')
+for(var j = 0; j < slist.length; j++){
+	var content = '<input type="checkbox" name="songIsDonw" class="rowcheckbox" checked><span class="rowSpan">'+slist[j]+'</span>'
+
+	var td = '<td>'+content+'</td>'
+	var tr = '<tr>'+td+'</tr>'
+	trs = trs + tr;
+}
+
+var table = '<table class="table table-striped">'+trs+'</table>'
+	
+
+// 将内容拼接到标签容器内 
+var navContent;
+	if(i == 0){
+		navContent = '<div role="tabpanel" class="tab-pane active" id="'+ListData[i].class+'">'+table+'</div>'
+	}else{
+		navContent = '<div role="tabpanel" class="tab-pane" id="'+ListData[i].class+'">'+table+'</div>'
+	}
+
+
+// 拼接容器 
+	$('.tab-content').append(navContent)
+
+}
+
+	
+
+// boostrap 默认函数 
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+	
+})
+
+
+
+
+$('#myTabs a[href="#profile"]').tab('show') // Select tab by name
+$('#myTabs a:first').tab('show') // Select first tab
+$('#myTabs a:last').tab('show') // Select last tab
+$('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
+
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  e.target // newly activated tab
+  e.relatedTarget // previous active tab
+
+	if(e.target.textContent === "你唱歌用的"){
+
+		$('body').append('<div class="demo"></div>')
+
+		$('.demo').fireworks({ 
+  sound: true, // 声音效果
+  opacity: 0.9, 
+  width: '100%', 
+  height: '100%'
+}); 
+
+$('.demo').click(function(e){
+	$('.demo').remove()
+
+
+})
+
+setTimeout(() => {
+	$('.demo').remove()
+}, 1000 * 60);
+
+	}
+})
+
+
+});
+
+
+
+
+
+	
+</script>
+
+
+
+
+	
+
+
