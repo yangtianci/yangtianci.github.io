@@ -3494,7 +3494,8 @@ for(var i= 0; i< ListData.length; i++){
 var trs = '';
 var slist = ListData[i].list.split('\n')
 for(var j = 0; j < slist.length; j++){
-	var content = '<input type="checkbox" name="songIsDonw" class="rowcheckbox" checked><span class="rowSpan">'+slist[j]+'</span>'
+	var idx = j+1
+	var content = '<input type="checkbox" name="songIsDonw" class="rowcheckbox" checked>'+ '<span class="rowSpan">'+idx+'</span>' +'<span class="rowSpan">'+slist[j]+'</span>'
 
 	var td = '<td>'+content+'</td>'
 	var tr = '<tr>'+td+'</tr>'
@@ -3542,23 +3543,29 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
 	if(e.target.textContent === "你唱歌用的"){
 
-		$('body').append('<div class="demo"></div>')
+		$('body').append('<div class="lalala"></div>')
 
-		$('.demo').fireworks({ 
+		$('.lalala').fireworks({ 
   sound: true, // 声音效果
-  opacity: 0.9, 
+  opacity: 0.7, 
   width: '100%', 
   height: '100%'
 }); 
 
-$('.demo').click(function(e){
-	$('.demo').remove()
+$('.lalala').click(function(e){
+
+	console.log(window.cusAudio)
+	
+	window.cusAudio.pause()
+	
+	$('.lalala').remove()
+
 
 
 })
 
 setTimeout(() => {
-	$('.demo').remove()
+	$('.lalala').remove()
 }, 1000 * 60);
 
 	}
@@ -3566,10 +3573,6 @@ setTimeout(() => {
 
 
 });
-
-
-
-
 
 	
 </script>

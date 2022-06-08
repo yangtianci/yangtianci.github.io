@@ -25,6 +25,8 @@
       audio = document.createElement('audio');
     }
 
+window.cusAudio = audio
+
     // create canvas and get the context
     var canvas = document.createElement('canvas');
     canvas.id = 'fireworksField';
@@ -267,7 +269,7 @@
 
     // Append the canvas and start the loops
     $(fireworksField).append(canvas);
-    setInterval(launch, 800);
+    setInterval(launch, 200);
     setInterval(loop, 1000 / 50);
 
     return fireworksField;
