@@ -17,6 +17,8 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 	
+<script src="../../assets/lib/canvas_bg.js"></script>
+
 </head>
 
 
@@ -39,11 +41,23 @@ a{
 	color: rgb(212, 99, 117) !important;
 }
 
+body{
+	position: relative;
+}
+
+#c{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	
+}
 
 </style>
 
 <body>
 
+	<canvas id="c" style="z-index: -1;text-align: center;"></canvas>
+	
 	<div class="container">
 		<div>
 
@@ -69,7 +83,7 @@ a{
 	  </table>
 
 
-	
+	  
 </body>
 </html>
 
@@ -3544,6 +3558,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 	if(e.target.textContent === "你唱歌用的"){
 
 		$('body').append('<div class="lalala"></div>')
+		$('body').append('<canvas id="c" style="z-index: -1;text-align: center;"></canvas>')
 
 		$('.lalala').fireworks({ 
   sound: true, // 声音效果
@@ -3559,9 +3574,6 @@ $('.lalala').click(function(e){
 	window.cusAudio.pause()
 	
 	$('.lalala').remove()
-
-
-
 })
 
 setTimeout(() => {
