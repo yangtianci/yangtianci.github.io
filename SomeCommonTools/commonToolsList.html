@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commonToolsList</title>
+</head>
+<body>
+    
+<header>tools list</header>
+
+
+<div id="flowDiv">
+
+<h3>图片导入流程功能测试</h3> 
+
+    <input type="file" name="file" multiple id="file">
+    <input type="button" value="上传文件" id="fileUpload">
+    <!-- 指定显示图片的位置 -->
+    <div id="box"></div>
+
+</div>
+
+
+
+</body>
+
+<script name="图片处理功能测试">
+
+  // 1、获取文件
+        var file = document.querySelector("#file");
+        var fileUpload = document.querySelector("#fileUpload");
+        var box = document.querySelector("#box");
+        // 读取多个文件时，需要使用files属性
+        fileUpload.onclick = function(){
+            var files = file.files;
+            for(var i=0;i<files.length;i++)
+            {
+                var read = new FileReader();
+                read.onload = function()
+                {
+                    var div = document.createElement("div");
+                    div.innerHTML = "<img src='"+this.result+"' class=img'">
+                    box.appendChild(div);
+                }
+                read.readAsDataURL(files[i]);
+            }
+        }
+
+
+
+</script>
+
+
+
+</html>
